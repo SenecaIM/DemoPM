@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Portfolio
 {
@@ -22,10 +23,39 @@ namespace Portfolio
             
         }
 
-        private void btnDetails_Click(object sender, EventArgs e)
+        private void btnDetailsShow_Click(object sender, EventArgs e)
         {
             detailsOLV.Visible = true;
+            ChangeSize();
 
+        }
+
+        private void btnDetailsHide_Click_1(object sender, EventArgs e)
+        {
+            detailsOLV.Visible = false;
+            ResizeToHide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ChangeSize();
+
+        }
+
+        private void ChangeSize()
+        {
+            int width = 1167;
+            int height = 697;
+
+            this.Size = new Size(width, height);
+        }
+
+        private new void ResizeToHide()
+        {
+            int width2 = 972;
+            int height2 = 697;
+
+            this.Size = new Size(width2, height2);
         }
     }
 }
