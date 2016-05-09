@@ -41,8 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.detailsOLV = new BrightIdeasSoftware.ObjectListView();
-            this.btnDetailsHide = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.portfolioOLV)).BeginInit();
             this.optionsgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detailsOLV)).BeginInit();
@@ -137,6 +135,7 @@
             this.btnDetailsShow.Name = "btnDetailsShow";
             this.btnDetailsShow.Size = new System.Drawing.Size(145, 31);
             this.btnDetailsShow.TabIndex = 8;
+            this.btnDetailsShow.Tag = "false";
             this.btnDetailsShow.Text = "Show Details ";
             this.btnDetailsShow.UseVisualStyleBackColor = true;
             this.btnDetailsShow.Click += new System.EventHandler(this.btnDetailsShow_Click);
@@ -184,40 +183,17 @@
             this.detailsOLV.HighlightForegroundColor = System.Drawing.Color.Empty;
             this.detailsOLV.Location = new System.Drawing.Point(953, 31);
             this.detailsOLV.Name = "detailsOLV";
-            this.detailsOLV.Size = new System.Drawing.Size(193, 615);
+            this.detailsOLV.Size = new System.Drawing.Size(0, 615);
             this.detailsOLV.TabIndex = 13;
             this.detailsOLV.UseCompatibleStateImageBehavior = false;
             this.detailsOLV.View = System.Windows.Forms.View.Details;
             this.detailsOLV.Visible = false;
             // 
-            // btnDetailsHide
-            // 
-            this.btnDetailsHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetailsHide.Location = new System.Drawing.Point(802, 119);
-            this.btnDetailsHide.Name = "btnDetailsHide";
-            this.btnDetailsHide.Size = new System.Drawing.Size(145, 32);
-            this.btnDetailsHide.TabIndex = 14;
-            this.btnDetailsHide.Text = "Hide Details ";
-            this.btnDetailsHide.UseVisualStyleBackColor = true;
-            this.btnDetailsHide.Click += new System.EventHandler(this.btnDetailsHide_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(522, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 658);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnDetailsHide);
+            this.ClientSize = new System.Drawing.Size(950, 658);
             this.Controls.Add(this.detailsOLV);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label2);
@@ -253,8 +229,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private BrightIdeasSoftware.ObjectListView detailsOLV;
-        private System.Windows.Forms.Button btnDetailsHide;
-        private System.Windows.Forms.Button button1;
     }
 }
 

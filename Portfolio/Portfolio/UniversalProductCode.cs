@@ -9,10 +9,10 @@ namespace Portfolio
 {
     public static class UniversalProductCode
     {
-        public static bool isValid(int code)
+        public static bool IsValid(int code)
         {
-            string baseNumber = code.ToString().Substring(0, code.ToString().Length - 1);
-            string check = Generate2(Convert.ToInt32(baseNumber)).ToString();
+            string basenumber = code.ToString().Substring(0, code.ToString().Length - 1);
+            string check = Append(Convert.ToInt32(basenumber)).ToString();
             if (check == code.ToString())
             {
                 return true;
@@ -26,7 +26,7 @@ namespace Portfolio
 
         }
 
-        public static int Generate2(int code)
+        public static int Append(int code)
         {
             int cd = Generate(code);
             return Convert.ToInt32(code.ToString() + cd.ToString());
