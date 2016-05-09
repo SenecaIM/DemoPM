@@ -57,5 +57,13 @@ namespace Portfolio
 
             this.Size = new Size(width2, height2);
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            UniversalProductCode.Generate(036241457);
+            MessageBox.Show(UniversalProductCode.Generate(100).ToString());
+            MessageBox.Show(UniversalProductCode.Generate2(100).ToString());
+            MessageBox.Show(UniversalProductCode.isValid(1003).ToString());
+        }
     }
 }
