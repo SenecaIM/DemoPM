@@ -21,5 +21,11 @@ namespace Portfolio
         {
             
         }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            detailsOLV.Visible = true;
+
+        }
     }
 }
