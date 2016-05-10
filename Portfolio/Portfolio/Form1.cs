@@ -14,7 +14,7 @@ namespace Portfolio
 {
     public partial class Form1 : Form
     {
-        Stock price = new Stock();
+        InstrumentCollection inst = new InstrumentCollection();
         public Form1()
         {
             InitializeComponent();
@@ -29,7 +29,9 @@ namespace Portfolio
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            inst.Fill();
+            ID.AspectName = "ID";
+            portfolioOLV.SetObjects(inst.InstrumentItems);
 
         }
 

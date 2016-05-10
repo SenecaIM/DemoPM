@@ -1,32 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Portfolio
 {
-    public class InstrumentCollection
+    public class Instrument
     {
-        public List<Instrument> InstrumentItems
+       
+
+        public Instrument(DataRow dr)
         {
-            get; set;
+
+            ID = Convert.ToInt32(dr["ID"]);
+            InstrumentID = Convert.ToInt32(dr["InstrumentID"]);
+            InstrumentDate = Convert.ToDateTime(dr["InstrumentDate"]);
+            InstrumentName = dr["InstrumentName"].ToString();
         }
 
-        public void Fill()
-        {
-            SqlDataAdapter da = new SqlDataAdapter();
-            DataSet ds = new DataSet();
-            SqlCommand cmd = Database.CommandFactory("spInstrumentDate");
-            da.SelectCommand = cmd;
-            da.Fill(ds);
-            DataTable dtInstrument = ds.Tables[0];
-            foreach (DataRow dr in dtInstrument.Rows)
-            {
-                InstrumentCollection ins = new InstrumentCollection(Convert.ToInt32(dr["ID"]), );
-                Stock.Add(ins);
-            }
-            
-        }
+        public int ID { get; set; }
+        public int InstrumentID { get; set; }
+        public DateTime InstrumentDate { get; set; }
+        public string InstrumentName { get; set; }
+
     }
 }
