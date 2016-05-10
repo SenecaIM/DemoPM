@@ -15,14 +15,14 @@ namespace Portfolio
             get; set;
         }
 
-        public void Fill()
+        public void Fill(DateTime valuationDate)
         {
             InstrumentItems = new List<Instrument>();
             SqlDataAdapter da = new SqlDataAdapter();
             DataSet ds = new DataSet();
             SqlCommand cmd = Database.CommandFactory("spInstrumentDate");
             da.SelectCommand = cmd;
-            cmd.Parameters.Add("ValuationDate", DateTime.Now);
+            cmd.Parameters.Add("ValuationDate", valuationDate.Date);
             da.Fill(ds);
             DataTable dtInstrument = ds.Tables[0];
             foreach (DataRow dr in dtInstrument.Rows)

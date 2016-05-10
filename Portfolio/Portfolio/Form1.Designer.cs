@@ -29,18 +29,6 @@
         private void InitializeComponent()
         {
             this.portfolioOLV = new BrightIdeasSoftware.ObjectListView();
-            this.optionsgroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.showOldCheck = new System.Windows.Forms.CheckBox();
-            this.btnDetailsShow = new System.Windows.Forms.Button();
-            this.fromDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.toDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.detailsOLV = new BrightIdeasSoftware.ObjectListView();
             this.ID = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.InstrumentID = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.InstrumentDate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -64,6 +52,18 @@
             this.FixedParValue = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.FixedCoupon = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.FixedAccuredInterest = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.optionsgroupBox = new System.Windows.Forms.GroupBox();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.showOldCheck = new System.Windows.Forms.CheckBox();
+            this.btnDetailsShow = new System.Windows.Forms.Button();
+            this.fromDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.detailsOLV = new BrightIdeasSoftware.ObjectListView();
             ((System.ComponentModel.ISupportInitialize)(this.portfolioOLV)).BeginInit();
             this.optionsgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detailsOLV)).BeginInit();
@@ -131,134 +131,6 @@
             this.portfolioOLV.UseCompatibleStateImageBehavior = false;
             this.portfolioOLV.View = System.Windows.Forms.View.Details;
             this.portfolioOLV.SelectedIndexChanged += new System.EventHandler(this.portfolioOLV_SelectedIndexChanged);
-            // 
-            // optionsgroupBox
-            // 
-            this.optionsgroupBox.Controls.Add(this.radioButton4);
-            this.optionsgroupBox.Controls.Add(this.radioButton3);
-            this.optionsgroupBox.Controls.Add(this.radioButton2);
-            this.optionsgroupBox.Controls.Add(this.radioButton1);
-            this.optionsgroupBox.Location = new System.Drawing.Point(12, 12);
-            this.optionsgroupBox.Name = "optionsgroupBox";
-            this.optionsgroupBox.Size = new System.Drawing.Size(200, 120);
-            this.optionsgroupBox.TabIndex = 6;
-            this.optionsgroupBox.TabStop = false;
-            this.optionsgroupBox.Text = "Portfolio Options";
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(7, 92);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 69);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(14, 13);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 45);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(93, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Show Portfolio";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 21);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(114, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Show Client details";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // showOldCheck
-            // 
-            this.showOldCheck.AutoSize = true;
-            this.showOldCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showOldCheck.Location = new System.Drawing.Point(771, 12);
-            this.showOldCheck.Name = "showOldCheck";
-            this.showOldCheck.Size = new System.Drawing.Size(160, 24);
-            this.showOldCheck.TabIndex = 7;
-            this.showOldCheck.Text = "Show Old Records";
-            this.showOldCheck.UseVisualStyleBackColor = true;
-            // 
-            // btnDetailsShow
-            // 
-            this.btnDetailsShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetailsShow.Location = new System.Drawing.Point(802, 73);
-            this.btnDetailsShow.Name = "btnDetailsShow";
-            this.btnDetailsShow.Size = new System.Drawing.Size(145, 31);
-            this.btnDetailsShow.TabIndex = 8;
-            this.btnDetailsShow.Tag = "false";
-            this.btnDetailsShow.Text = "Show Details ";
-            this.btnDetailsShow.UseVisualStyleBackColor = true;
-            this.btnDetailsShow.Click += new System.EventHandler(this.btnDetailsShow_Click);
-            // 
-            // fromDatePicker
-            // 
-            this.fromDatePicker.Location = new System.Drawing.Point(247, 31);
-            this.fromDatePicker.Name = "fromDatePicker";
-            this.fromDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.fromDatePicker.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Date Picker";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Range";
-            // 
-            // toDatePicker
-            // 
-            this.toDatePicker.Location = new System.Drawing.Point(247, 81);
-            this.toDatePicker.Name = "toDatePicker";
-            this.toDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.toDatePicker.TabIndex = 12;
-            // 
-            // detailsOLV
-            // 
-            this.detailsOLV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.detailsOLV.CellEditUseWholeCell = false;
-            this.detailsOLV.Cursor = System.Windows.Forms.Cursors.Default;
-            this.detailsOLV.HighlightBackgroundColor = System.Drawing.Color.Empty;
-            this.detailsOLV.HighlightForegroundColor = System.Drawing.Color.Empty;
-            this.detailsOLV.Location = new System.Drawing.Point(953, 31);
-            this.detailsOLV.Name = "detailsOLV";
-            this.detailsOLV.Size = new System.Drawing.Size(0, 615);
-            this.detailsOLV.TabIndex = 13;
-            this.detailsOLV.UseCompatibleStateImageBehavior = false;
-            this.detailsOLV.View = System.Windows.Forms.View.Details;
-            this.detailsOLV.Visible = false;
             // 
             // ID
             // 
@@ -362,6 +234,135 @@
             // FixedAccuredInterest
             // 
             this.FixedAccuredInterest.Text = "FixedAccuredInterest";
+            // 
+            // optionsgroupBox
+            // 
+            this.optionsgroupBox.Controls.Add(this.radioButton4);
+            this.optionsgroupBox.Controls.Add(this.radioButton3);
+            this.optionsgroupBox.Controls.Add(this.radioButton2);
+            this.optionsgroupBox.Controls.Add(this.radioButton1);
+            this.optionsgroupBox.Location = new System.Drawing.Point(12, 12);
+            this.optionsgroupBox.Name = "optionsgroupBox";
+            this.optionsgroupBox.Size = new System.Drawing.Size(200, 120);
+            this.optionsgroupBox.TabIndex = 6;
+            this.optionsgroupBox.TabStop = false;
+            this.optionsgroupBox.Text = "Portfolio Options";
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(7, 92);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(85, 17);
+            this.radioButton4.TabIndex = 3;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "radioButton4";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(7, 69);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(14, 13);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(7, 45);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(93, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Show Portfolio";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 21);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(114, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Show Client details";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // showOldCheck
+            // 
+            this.showOldCheck.AutoSize = true;
+            this.showOldCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showOldCheck.Location = new System.Drawing.Point(771, 12);
+            this.showOldCheck.Name = "showOldCheck";
+            this.showOldCheck.Size = new System.Drawing.Size(160, 24);
+            this.showOldCheck.TabIndex = 7;
+            this.showOldCheck.Text = "Show Old Records";
+            this.showOldCheck.UseVisualStyleBackColor = true;
+            // 
+            // btnDetailsShow
+            // 
+            this.btnDetailsShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailsShow.Location = new System.Drawing.Point(802, 73);
+            this.btnDetailsShow.Name = "btnDetailsShow";
+            this.btnDetailsShow.Size = new System.Drawing.Size(145, 31);
+            this.btnDetailsShow.TabIndex = 8;
+            this.btnDetailsShow.Tag = "false";
+            this.btnDetailsShow.Text = "Show Details ";
+            this.btnDetailsShow.UseVisualStyleBackColor = true;
+            this.btnDetailsShow.Click += new System.EventHandler(this.btnDetailsShow_Click);
+            // 
+            // fromDatePicker
+            // 
+            this.fromDatePicker.Location = new System.Drawing.Point(247, 31);
+            this.fromDatePicker.Name = "fromDatePicker";
+            this.fromDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.fromDatePicker.TabIndex = 9;
+            this.fromDatePicker.ValueChanged += new System.EventHandler(this.fromDatePicker_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(244, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Date Picker";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(247, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Range";
+            // 
+            // toDatePicker
+            // 
+            this.toDatePicker.Location = new System.Drawing.Point(247, 81);
+            this.toDatePicker.Name = "toDatePicker";
+            this.toDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.toDatePicker.TabIndex = 12;
+            // 
+            // detailsOLV
+            // 
+            this.detailsOLV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.detailsOLV.CellEditUseWholeCell = false;
+            this.detailsOLV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.detailsOLV.HighlightBackgroundColor = System.Drawing.Color.Empty;
+            this.detailsOLV.HighlightForegroundColor = System.Drawing.Color.Empty;
+            this.detailsOLV.Location = new System.Drawing.Point(953, 31);
+            this.detailsOLV.Name = "detailsOLV";
+            this.detailsOLV.Size = new System.Drawing.Size(0, 615);
+            this.detailsOLV.TabIndex = 13;
+            this.detailsOLV.UseCompatibleStateImageBehavior = false;
+            this.detailsOLV.View = System.Windows.Forms.View.Details;
+            this.detailsOLV.Visible = false;
             // 
             // Form1
             // 
