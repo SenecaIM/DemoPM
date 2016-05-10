@@ -6,17 +6,27 @@ using System.Threading.Tasks;
 
 namespace Portfolio
 {
-    public class Instrument
+    public class InstrumentCollection
     {
-        public Stock()
+        public List<Instrument> InstrumentItems
+        {
+            get; set;
+        }
+
+        public void Fill()
         {
             SqlDataAdapter da = new SqlDataAdapter();
             DataSet ds = new DataSet();
             SqlCommand cmd = Database.CommandFactory("spInstrumentDate");
             da.SelectCommand = cmd;
             da.Fill(ds);
-            DataTable dtInstrument = ds.Tables[0];            
+            DataTable dtInstrument = ds.Tables[0];
+            foreach (DataRow dr in dtInstrument.Rows)
+            {
+                InstrumentCollection ins = new InstrumentCollection(Convert.ToInt32(dr["ID"]), );
+                Stock.Add(ins);
+            }
             
-            return 
         }
+    }
 }

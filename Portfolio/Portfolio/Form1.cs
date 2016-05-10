@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace Portfolio
 {
     public partial class Form1 : Form
     {
+        Stock price = new Stock();
         public Form1()
         {
             InitializeComponent();
