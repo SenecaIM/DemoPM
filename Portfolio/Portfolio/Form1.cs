@@ -46,5 +46,10 @@ namespace Portfolio
                 btnDetailsShow.Text = "Show Details";
             }
         }
+
+        private void portfolioOLV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
