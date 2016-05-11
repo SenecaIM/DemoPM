@@ -77,7 +77,10 @@ namespace Portfolio
 
         private void portfolioOLV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+            //ObjectListView o = sender as ObjectListView;
+            ObjectListView o = (ObjectListView)sender;
+            propertyGrid1.SelectedObject = (Instrument)o.SelectedObject;
         }
 
         private void fromDatePicker_ValueChanged(object sender, EventArgs e)
@@ -89,6 +92,16 @@ namespace Portfolio
         {
             inst.Fill(fromDatePicker.Value);
             portfolioOLV.SetObjects(inst.InstrumentItems);
+        }
+        private void Refresh2()
+        {
+            inst.Fill(fromDatePicker.Value);
+            portfolioOLV.SetObjects(inst.InstrumentItems.Where(p=>p.InstrumentDate > toDatePicker.Value.Date).ToList<Instrument>());
+        }
+
+        private void toDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            Refresh2();
         }
     }
 }

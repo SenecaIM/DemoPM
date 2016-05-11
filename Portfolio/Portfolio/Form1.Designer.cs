@@ -64,6 +64,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.toDatePicker = new System.Windows.Forms.DateTimePicker();
             this.detailsOLV = new BrightIdeasSoftware.ObjectListView();
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             ((System.ComponentModel.ISupportInitialize)(this.portfolioOLV)).BeginInit();
             this.optionsgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detailsOLV)).BeginInit();
@@ -122,10 +123,12 @@
             this.FixedCoupon,
             this.FixedAccuredInterest});
             this.portfolioOLV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.portfolioOLV.FullRowSelect = true;
             this.portfolioOLV.HighlightBackgroundColor = System.Drawing.Color.Empty;
             this.portfolioOLV.HighlightForegroundColor = System.Drawing.Color.Empty;
             this.portfolioOLV.Location = new System.Drawing.Point(12, 187);
             this.portfolioOLV.Name = "portfolioOLV";
+            this.portfolioOLV.ShowGroups = false;
             this.portfolioOLV.Size = new System.Drawing.Size(919, 459);
             this.portfolioOLV.TabIndex = 1;
             this.portfolioOLV.UseCompatibleStateImageBehavior = false;
@@ -327,18 +330,18 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(244, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Date Picker";
+            this.label1.Text = "Maximum Date";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(247, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Range";
+            this.label2.Text = "Minimum Date";
             // 
             // toDatePicker
             // 
@@ -346,6 +349,7 @@
             this.toDatePicker.Name = "toDatePicker";
             this.toDatePicker.Size = new System.Drawing.Size(200, 20);
             this.toDatePicker.TabIndex = 12;
+            this.toDatePicker.ValueChanged += new System.EventHandler(this.toDatePicker_ValueChanged);
             // 
             // detailsOLV
             // 
@@ -364,11 +368,19 @@
             this.detailsOLV.View = System.Windows.Forms.View.Details;
             this.detailsOLV.Visible = false;
             // 
+            // propertyGrid1
+            // 
+            this.propertyGrid1.Location = new System.Drawing.Point(646, 31);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.Size = new System.Drawing.Size(130, 130);
+            this.propertyGrid1.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 658);
+            this.Controls.Add(this.propertyGrid1);
             this.Controls.Add(this.detailsOLV);
             this.Controls.Add(this.toDatePicker);
             this.Controls.Add(this.label2);
@@ -427,6 +439,7 @@
         private BrightIdeasSoftware.OLVColumn FixedParValue;
         private BrightIdeasSoftware.OLVColumn FixedCoupon;
         private BrightIdeasSoftware.OLVColumn FixedAccuredInterest;
+        private System.Windows.Forms.PropertyGrid propertyGrid1;
     }
 }
 
