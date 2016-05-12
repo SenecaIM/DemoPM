@@ -13,18 +13,20 @@ using System.Windows.Forms.VisualStyles;
 
 namespace Portfolio
 {
-    public partial class Form1 : Form
+    
+    public partial class InstrumentControl : UserControl
     {
+        PropertyForm prop = new PropertyForm();
         InstrumentCollection inst = new InstrumentCollection();
-        public Form1()
+        public InstrumentControl()
         {
             InitializeComponent();
         }
 
         private void btnDetailsShow_Click(object sender, EventArgs e)
         {
-            propertyGrid1.Visible = !propertyGrid1.Visible;
-            ChangeSize(propertyGrid1.Visible);
+            prop.Show();
+            prop.SetLocation((Form)this.Parent);
 
         }
 
@@ -82,7 +84,7 @@ namespace Portfolio
 
             //ObjectListView o = sender as ObjectListView;
             ObjectListView o = (ObjectListView)sender;
-            propertyGrid1.SelectedObject = (Instrument)o.SelectedObject;
+            //propertyGrid1.SelectedObject = (Instrument)o.SelectedObject;
         }
 
         private void fromDatePicker_ValueChanged(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace Portfolio
 {
-    partial class Form1
+    partial class InstrumentControl
     {
         /// <summary>
         /// Required designer variable.
@@ -38,17 +38,13 @@
             this.InstrumentNameColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.PriceColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.optionsgroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.showOldCheck = new System.Windows.Forms.CheckBox();
+            this.PortfolioRB = new System.Windows.Forms.RadioButton();
+            this.ClientRB = new System.Windows.Forms.RadioButton();
             this.btnDetailsShow = new System.Windows.Forms.Button();
             this.fromDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             ((System.ComponentModel.ISupportInitialize)(this.portfolioOLV)).BeginInit();
             this.optionsgroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +79,7 @@
             this.portfolioOLV.Location = new System.Drawing.Point(12, 187);
             this.portfolioOLV.Name = "portfolioOLV";
             this.portfolioOLV.ShowGroups = false;
-            this.portfolioOLV.Size = new System.Drawing.Size(1081, 459);
+            this.portfolioOLV.Size = new System.Drawing.Size(894, 459);
             this.portfolioOLV.TabIndex = 1;
             this.portfolioOLV.UseCompatibleStateImageBehavior = false;
             this.portfolioOLV.View = System.Windows.Forms.View.Details;
@@ -133,76 +129,42 @@
             // 
             // optionsgroupBox
             // 
-            this.optionsgroupBox.Controls.Add(this.radioButton4);
-            this.optionsgroupBox.Controls.Add(this.radioButton3);
-            this.optionsgroupBox.Controls.Add(this.radioButton2);
-            this.optionsgroupBox.Controls.Add(this.radioButton1);
+            this.optionsgroupBox.Controls.Add(this.PortfolioRB);
+            this.optionsgroupBox.Controls.Add(this.ClientRB);
             this.optionsgroupBox.Location = new System.Drawing.Point(12, 12);
             this.optionsgroupBox.Name = "optionsgroupBox";
-            this.optionsgroupBox.Size = new System.Drawing.Size(200, 120);
+            this.optionsgroupBox.Size = new System.Drawing.Size(200, 72);
             this.optionsgroupBox.TabIndex = 6;
             this.optionsgroupBox.TabStop = false;
             this.optionsgroupBox.Text = "Portfolio Options";
             // 
-            // radioButton4
+            // PortfolioRB
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(7, 92);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.PortfolioRB.AutoSize = true;
+            this.PortfolioRB.Location = new System.Drawing.Point(6, 46);
+            this.PortfolioRB.Name = "PortfolioRB";
+            this.PortfolioRB.Size = new System.Drawing.Size(126, 17);
+            this.PortfolioRB.TabIndex = 3;
+            this.PortfolioRB.TabStop = true;
+            this.PortfolioRB.Text = "Show Portfolio details";
+            this.PortfolioRB.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // ClientRB
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 69);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(14, 13);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 45);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(93, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Show Portfolio";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 21);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(114, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Show Client details";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // showOldCheck
-            // 
-            this.showOldCheck.AutoSize = true;
-            this.showOldCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showOldCheck.Location = new System.Drawing.Point(250, 135);
-            this.showOldCheck.Name = "showOldCheck";
-            this.showOldCheck.Size = new System.Drawing.Size(160, 24);
-            this.showOldCheck.TabIndex = 7;
-            this.showOldCheck.Text = "Show Old Records";
-            this.showOldCheck.UseVisualStyleBackColor = true;
+            this.ClientRB.AutoSize = true;
+            this.ClientRB.Location = new System.Drawing.Point(7, 21);
+            this.ClientRB.Name = "ClientRB";
+            this.ClientRB.Size = new System.Drawing.Size(114, 17);
+            this.ClientRB.TabIndex = 0;
+            this.ClientRB.TabStop = true;
+            this.ClientRB.Text = "Show Client details";
+            this.ClientRB.UseVisualStyleBackColor = true;
             // 
             // btnDetailsShow
             // 
             this.btnDetailsShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDetailsShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetailsShow.Location = new System.Drawing.Point(749, 73);
+            this.btnDetailsShow.Location = new System.Drawing.Point(562, 73);
             this.btnDetailsShow.Name = "btnDetailsShow";
             this.btnDetailsShow.Size = new System.Drawing.Size(145, 31);
             this.btnDetailsShow.TabIndex = 8;
@@ -245,32 +207,19 @@
             this.toDatePicker.TabIndex = 12;
             this.toDatePicker.ValueChanged += new System.EventHandler(this.toDatePicker_ValueChanged);
             // 
-            // propertyGrid1
-            // 
-            this.propertyGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.propertyGrid1.Location = new System.Drawing.Point(908, 73);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(185, 573);
-            this.propertyGrid1.TabIndex = 14;
-            this.propertyGrid1.Visible = false;
-            // 
-            // Form1
+            // InstrumentControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 658);
-            this.Controls.Add(this.propertyGrid1);
             this.Controls.Add(this.toDatePicker);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fromDatePicker);
             this.Controls.Add(this.btnDetailsShow);
-            this.Controls.Add(this.showOldCheck);
             this.Controls.Add(this.optionsgroupBox);
             this.Controls.Add(this.portfolioOLV);
-            this.Name = "Form1";
-            this.Text = "Portfolio";
+            this.Name = "InstrumentControl";
+            this.Size = new System.Drawing.Size(918, 658);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.portfolioOLV)).EndInit();
             this.optionsgroupBox.ResumeLayout(false);
@@ -283,14 +232,11 @@
         #endregion
         private BrightIdeasSoftware.ObjectListView portfolioOLV;
         private System.Windows.Forms.GroupBox optionsgroupBox;
-        private System.Windows.Forms.CheckBox showOldCheck;
         private System.Windows.Forms.Button btnDetailsShow;
         private System.Windows.Forms.DateTimePicker fromDatePicker;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton PortfolioRB;
+        private System.Windows.Forms.RadioButton ClientRB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker toDatePicker;
         private BrightIdeasSoftware.OLVColumn IDColumn;
@@ -301,7 +247,6 @@
         private BrightIdeasSoftware.OLVColumn Sedol1Column;
         private BrightIdeasSoftware.OLVColumn InstrumentNameColumn;
         private BrightIdeasSoftware.OLVColumn PriceColumn;
-        private System.Windows.Forms.PropertyGrid propertyGrid1;
     }
 }
 
