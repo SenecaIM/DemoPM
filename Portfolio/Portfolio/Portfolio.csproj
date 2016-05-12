@@ -67,6 +67,18 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Navibar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navibar.Designer.cs">
+      <DependentUpon>Navibar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortfolioControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PortfolioControl.Designer.cs">
+      <DependentUpon>PortfolioControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="PropertyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navibar.resx">
+      <DependentUpon>Navibar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -25,8 +25,17 @@ namespace Portfolio
 
         private void btnDetailsShow_Click(object sender, EventArgs e)
         {
-            prop.Show();
-            prop.SetLocation((Form)this.Parent);
+            if (prop.Visible)
+            {
+                prop.Hide();
+                btnDetailsShow.Text = "Show Details";
+            }
+            else
+            {
+                prop.Show();
+                prop.SetLocation((Form)this.Parent);
+                btnDetailsShow.Text = "Hide Details";
+            }
 
         }
 
@@ -82,8 +91,9 @@ namespace Portfolio
         private void portfolioOLV_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            //ObjectListView o = sender as ObjectListView;
             ObjectListView o = (ObjectListView)sender;
+            prop.SetObject((Instrument)o.SelectedObject);
+            
             //propertyGrid1.SelectedObject = (Instrument)o.SelectedObject;
         }
 

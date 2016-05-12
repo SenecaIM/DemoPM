@@ -71,5 +71,10 @@ namespace Portfolio
             prop.SetObject((Client)o.SelectedObject);
 
         }
+
+        private void btnDetailsShow_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
