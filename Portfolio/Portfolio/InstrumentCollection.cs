@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Portfolio
 {
+    [TypeConverter(typeof(ExpandableObjectConverter))]
     public class InstrumentCollection
     {
         public List<Instrument> InstrumentItems

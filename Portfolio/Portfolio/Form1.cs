@@ -23,39 +23,39 @@ namespace Portfolio
 
         private void btnDetailsShow_Click(object sender, EventArgs e)
         {
-            detailsOLV.Visible = !detailsOLV.Visible;
-            ChangeSize(detailsOLV.Visible);
+            propertyGrid1.Visible = !propertyGrid1.Visible;
+            ChangeSize(propertyGrid1.Visible);
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             inst.Fill(DateTime.Now);
-            ID.AspectName = "ID";
-            InstrumentID.AspectName = "InstrumentID";
-            InstrumentDate.AspectName = "InstrumentDate";
-            ISIN.AspectName = "ISIN";
-            Ticker.AspectName = "Ticker";
-            Sedol1.AspectName = "Sedol1";
-            Exchange.AspectName = "Exchange";
-            InstrumentName.AspectName = "InstrumentName";
-            InstrumentType.AspectName = "InstrumentType";
-            PriceMid.AspectName = "PriceMid";
-            PriceBid.AspectName = "PriceBid";
-            PriceAsk.AspectName = "PriceAsk";
-            PriceLast.AspectName = "PriceLast";
-            PriceNAV.AspectName = "PriceNAV";
-            PriceCurrencyID.AspectName = "PriceCurrencyID";
-            PriceFactor.AspectName = "PriceFactor";
-            DivGross.AspectName = "DivGross";
-            DivCurrencyID.AspectName = "DivCurrencyID";
-            DivFactor.AspectName = "DivFactor";
-            FixedParAmount.AspectName = "FixedParAmount";
-            FixedParValue.AspectName = "FixedParValue";
-            FixedCoupon.AspectName = "FixedCoupon";
-            FixedAccuredInterest.AspectName = "FixedAccuredInterest";
+            IDColumn.AspectName = "ID";
+            InstrumentIDColumn.AspectName = "Identifier.InstrumentID";
+            InstrumentDateColumn.AspectName = "InstrumentDate";
+            ISINColumn.AspectName = "Identifier.ISIN";
+            TickerColumn.AspectName = "Identifier.Ticker";
+            Sedol1Column.AspectName = "Identifier.Sedol1";
+            //Exchange.AspectName = "Exchange";
+            InstrumentNameColumn.AspectName = "Identifier.InstrumentName";
+            //InstrumentType.AspectName = "InstrumentType";
+            //PriceMid.AspectName = "PriceMid";
+            //PriceBid.AspectName = "PriceBid";
+            //PriceAsk.AspectName = "PriceAsk";
+            //PriceLast.AspectName = "PriceLast";
+            //PriceNAV.AspectName = "PriceNAV";
+            //PriceCurrencyID.AspectName = "PriceCurrencyID";
+            PriceColumn.AspectName = "Price";
+            //DivGross.AspectName = "DivGross";
+            //DivCurrencyID.AspectName = "DivCurrencyID";
+            //DivFactor.AspectName = "DivFactor";
+            //FixedParAmount.AspectName = "FixedParAmount";
+            //FixedParValue.AspectName = "FixedParValue";
+            //FixedCoupon.AspectName = "FixedCoupon";
+            //FixedAccuredInterest.AspectName = "FixedAccuredInterest";
             Refresh();
-            this.portfolioOLV.AddDecoration(new TintedColumnDecoration(PriceLast));
+           
 
         }
 
@@ -66,11 +66,13 @@ namespace Portfolio
                 //int width = 1167;
                 //int height = 697;
                 this.Size = new Size(this.Size.Width + 195, this.Size.Height);
+                portfolioOLV.Size = new Size(portfolioOLV.Size.Width - 215, portfolioOLV.Size.Height);
                 btnDetailsShow.Text = "Hide Details";
             }
             else
             {
                 this.Size = new Size(this.Size.Width - 195, this.Size.Height);
+                portfolioOLV.Size = new Size(portfolioOLV.Size.Width + 215, portfolioOLV.Size.Height);
                 btnDetailsShow.Text = "Show Details";
             }
         }
