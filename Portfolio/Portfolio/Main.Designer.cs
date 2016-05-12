@@ -28,31 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.clientsControl1 = new Portfolio.ClientsControl();
             this.SuspendLayout();
-            // 
-            // clientsControl1
-            // 
-            this.clientsControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clientsControl1.Location = new System.Drawing.Point(0, 0);
-            this.clientsControl1.Name = "clientsControl1";
-            this.clientsControl1.Size = new System.Drawing.Size(1065, 827);
-            this.clientsControl1.TabIndex = 0;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 827);
-            this.Controls.Add(this.clientsControl1);
             this.Name = "Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private ClientsControl clientsControl1;
     }
 }
