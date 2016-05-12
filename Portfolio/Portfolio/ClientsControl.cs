@@ -13,7 +13,7 @@ namespace Portfolio
 {
     public partial class ClientsControl : UserControl
     {
-        PropertyForm prop = new PropertyForm();
+        PropertyForm prop1 = new PropertyForm();
         ClientCollection cli = new ClientCollection();
         public ClientsControl()
         {
@@ -39,15 +39,15 @@ namespace Portfolio
 
         private void btnDetailsShow_Click(object sender, EventArgs e)
         {
-            if (prop.Visible)
+            if (prop1.Visible)
             {
-                prop.Hide();
+                prop1.Hide();
                 btnDetailsShow.Text = "Show Details";
             }
             else
             {
-                prop.Show();
-                prop.SetLocation((Form)this.Parent);
+                prop1.Show();
+                prop1.SetLocation((Form)this.Parent);
                 btnDetailsShow.Text = "Hide Details";
             }
             
@@ -68,13 +68,23 @@ namespace Portfolio
         private void clientOLV_SelectedIndexChanged(object sender, EventArgs e)
         {
             ObjectListView o = (ObjectListView)sender;
-            prop.SetObject((Client)o.SelectedObject);
+            prop1.SetObject((Client)o.SelectedObject);
 
         }
 
         private void btnDetailsShow_Click_1(object sender, EventArgs e)
         {
-
+            if (prop1.Visible)
+            {
+                prop1.Hide();
+                btnDetailsShow.Text = "Show Details";
+            }
+            else
+            {
+                prop1.Show();
+                prop1.SetLocation((Form)this.Parent);
+                btnDetailsShow.Text = "Hide Details";
+            }
         }
     }
 }

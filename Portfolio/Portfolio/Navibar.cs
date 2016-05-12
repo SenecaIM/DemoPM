@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Portfolio;
 
 namespace Portfolio
 {
     public partial class Navibar : UserControl
     {
+        public event EventHandler showInstruments;
+        public event EventHandler showPortfolio;
         public event EventHandler showClients;
         public Navibar()
         {
@@ -27,5 +30,18 @@ namespace Portfolio
         {
             showClients(sender, e);
         }
+
+        private void btnInstruments_Click(object sender, EventArgs e)
+        {
+            showInstruments(sender, e);
+        }
+
+        private void btnPortfolio_Click(object sender, EventArgs e)
+        {
+            showPortfolio(sender, e);
+        }
+
+        
+        }
     }
-}
+
