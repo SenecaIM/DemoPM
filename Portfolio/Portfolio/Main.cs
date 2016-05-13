@@ -12,6 +12,9 @@ namespace Portfolio
 {
     public partial class Main : Form
     {
+
+        PropertyForm prop1 = new PropertyForm();
+
         private void removeControls()
         {
 
@@ -26,7 +29,7 @@ namespace Portfolio
                     this.Controls.Remove(ctrl);
                 }
                 else if (ctrl.GetType() == typeof(ClientsControl))
-                        {
+                {                     
                     this.Controls.Remove(ctrl);
                 }
             }
@@ -37,6 +40,7 @@ namespace Portfolio
             removeControls();
             InstrumentControl con = new InstrumentControl();
             con.Location = new Point(1, 1);
+            con.ShowObject += new EventHandler(con1_ShowObj);
             this.Controls.Add(con);
 
         }
@@ -45,7 +49,20 @@ namespace Portfolio
             removeControls();
             ClientsControl cl1 = new ClientsControl();
             cl1.Location = new Point(1, 1);
+            cl1.ShowObject += new EventHandler(cl1_ShowObject);
             this.Controls.Add(cl1);
+        }
+       
+        private void cl1_ShowObject(object sender, EventArgs e)
+        {
+            Client cll = sender as Client;
+            prop1.SetObject(cll);
+        }
+
+        private void con1_ShowObj(object sender, EventArgs e)
+        {
+            Instrument ill = sender as Instrument;
+            prop1.SetObject(ill);
         }
         private void AddPortfolio()
         {
@@ -60,6 +77,7 @@ namespace Portfolio
             navibar1.showClients += new EventHandler(navibar1_showClients);
             navibar1.showInstruments += new EventHandler(navibar1_showInstruments);
             navibar1.showPortfolio += new EventHandler(navibar1_showPortfolio);
+
 
         }
 
@@ -86,6 +104,21 @@ namespace Portfolio
         private void Main_Load(object sender, EventArgs e)
         {
             AddInstruments();
+        }
+
+        private void btnDetailsShow_Click(object sender, EventArgs e)
+        {
+            if (prop1.Visible)
+            {
+                prop1.Hide();
+                btnDetailsShow.Text = "Show Details";
+            }
+            else
+            {
+                prop1.Show();
+                prop1.SetLocation((Form)this);
+                btnDetailsShow.Text = "Hide Details";
+            }
         }
     }
 }

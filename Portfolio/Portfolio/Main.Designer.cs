@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.navibar1 = new Portfolio.Navibar();
+            this.btnDetailsShow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // navibar1
@@ -38,11 +39,25 @@
             this.navibar1.Size = new System.Drawing.Size(207, 111);
             this.navibar1.TabIndex = 0;
             // 
+            // btnDetailsShow
+            // 
+            this.btnDetailsShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDetailsShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailsShow.Location = new System.Drawing.Point(13, 141);
+            this.btnDetailsShow.Name = "btnDetailsShow";
+            this.btnDetailsShow.Size = new System.Drawing.Size(145, 31);
+            this.btnDetailsShow.TabIndex = 20;
+            this.btnDetailsShow.Tag = "false";
+            this.btnDetailsShow.Text = "Show Details ";
+            this.btnDetailsShow.UseVisualStyleBackColor = true;
+            this.btnDetailsShow.Click += new System.EventHandler(this.btnDetailsShow_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 624);
+            this.Controls.Add(this.btnDetailsShow);
             this.Controls.Add(this.navibar1);
             this.Name = "Main";
             this.Text = "Main";
@@ -54,5 +69,6 @@
         #endregion
 
         private Navibar navibar1;
+        private System.Windows.Forms.Button btnDetailsShow;
     }
 }

@@ -16,28 +16,15 @@ namespace Portfolio
     
     public partial class InstrumentControl : UserControl
     {
-        PropertyForm prop = new PropertyForm();
+        public event EventHandler ShowObject;
+        
         InstrumentCollection inst = new InstrumentCollection();
         public InstrumentControl()
         {
             InitializeComponent();
         }
 
-        private void btnDetailsShow_Click(object sender, EventArgs e)
-        {
-            if (prop.Visible)
-            {
-                prop.Hide();
-                btnDetailsShow.Text = "Show Details";
-            }
-            else
-            {
-                prop.Show();
-                prop.SetLocation((Form)this.Parent);
-                btnDetailsShow.Text = "Hide Details";
-            }
 
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -71,52 +58,22 @@ namespace Portfolio
 
         }
 
-        private void ChangeSize(bool visible)
-        {
-            if (visible == true)
-            {
-                //int width = 1167;
-                //int height = 697;
-                this.Size = new Size(this.Size.Width + 195, this.Size.Height);
-                portfolioOLV.Size = new Size(portfolioOLV.Size.Width - 215, portfolioOLV.Size.Height);
-                btnDetailsShow.Text = "Hide Details";
-            }
-            else
-            {
-                this.Size = new Size(this.Size.Width - 195, this.Size.Height);
-                portfolioOLV.Size = new Size(portfolioOLV.Size.Width + 215, portfolioOLV.Size.Height);
-                btnDetailsShow.Text = "Show Details";
-            }
-        }
-
         private void portfolioOLV_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             ObjectListView o = (ObjectListView)sender;
-            prop.SetObject((Instrument)o.SelectedObject);
-            
-            //propertyGrid1.SelectedObject = (Instrument)o.SelectedObject;
+            ShowObject((Instrument)o.SelectedObject, e);
         }
 
         private void fromDatePicker_ValueChanged(object sender, EventArgs e)
         {
-            Refresh();
+            Refresh("GBP");
         }
 
         private void Refresh(string currencyID)
         {
             inst.Fill(fromDatePicker.Value, currencyID);
             portfolioOLV.SetObjects(inst.InstrumentItems);
-        }
-        private void Refresh2(string currencyID)
-        {
-            inst.Fill(fromDatePicker.Value, currencyID);
-            portfolioOLV.SetObjects(inst.InstrumentItems.Where(p=>p.InstrumentDate > toDatePicker.Value.Date).ToList<Instrument>());
-        }
-
-        private void toDatePicker_ValueChanged(object sender, EventArgs e)
-        {
-            Refresh2("GBP");
         }
     }
 }

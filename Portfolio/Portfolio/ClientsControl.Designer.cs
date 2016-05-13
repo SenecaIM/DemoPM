@@ -33,7 +33,6 @@
             this.ClientNameColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.CurrencyID = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.AddressColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.btnDetailsShow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.clientOLV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,24 +85,10 @@
             this.AddressColumn.Text = "Address";
             this.AddressColumn.Width = 274;
             // 
-            // btnDetailsShow
-            // 
-            this.btnDetailsShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDetailsShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetailsShow.Location = new System.Drawing.Point(12, 146);
-            this.btnDetailsShow.Name = "btnDetailsShow";
-            this.btnDetailsShow.Size = new System.Drawing.Size(145, 31);
-            this.btnDetailsShow.TabIndex = 19;
-            this.btnDetailsShow.Tag = "false";
-            this.btnDetailsShow.Text = "Show Details ";
-            this.btnDetailsShow.UseVisualStyleBackColor = true;
-            this.btnDetailsShow.Click += new System.EventHandler(this.btnDetailsShow_Click_1);
-            // 
             // ClientsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnDetailsShow);
             this.Controls.Add(this.clientOLV);
             this.Name = "ClientsControl";
             this.Size = new System.Drawing.Size(911, 827);
@@ -121,6 +106,5 @@
         private BrightIdeasSoftware.OLVColumn ClientNameColumn;
         private BrightIdeasSoftware.OLVColumn CurrencyID;
         private BrightIdeasSoftware.OLVColumn AddressColumn;
-        private System.Windows.Forms.Button btnDetailsShow;
     }
 }

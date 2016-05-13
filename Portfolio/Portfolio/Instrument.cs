@@ -215,7 +215,7 @@ namespace Portfolio
 
         [Browsable(true)]
         [ReadOnly(true)]
-        [Description("Describes the income of a particulat stock")]
+        [Description("Describes the income of a particular stock")]
         [Category("Price")]
         [DisplayName("FXIncome")]
         public FX FXIncome { get; set; }
