@@ -17,6 +17,10 @@ namespace Portfolio
             ClientName = dr["ClientName"].ToString();
             CurrencyID = dr["CurrencyID"].ToString();
             Address = dr["Address"].ToString();
+            Capital = dr["Capital"].ToString();
+            ClientType = dr["ClientType"].ToString();
+            Company = dr["Company"].ToString();
+            TelephoneNumber = dr["TelephoneNumber"].ToString();
         }
         
         [Browsable(true)]
@@ -43,5 +47,29 @@ namespace Portfolio
         [Category("ClientInformation")]
         [DisplayName("Address")]
         public string Address { get; private set; }
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [Description("Client's personal capital")]
+        [Category("ClientInformation")]
+        [DisplayName("Client Capital")]
+        public string Capital { get; set; }
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [Description("The type of the client ")]
+        [Category("ClientInformation")]
+        [DisplayName("Client Type")]
+        public string ClientType { get; set; }
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [Description("Company the client is based in")]
+        [Category("ClientInformation")]
+        [DisplayName("Company")]
+        public string Company { get; set; }
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [Description("Client's telephone number")]
+        [Category("ClientInformation")]
+        [DisplayName("Telephone Number")]
+        public string TelephoneNumber { get; set; }
     }
 }

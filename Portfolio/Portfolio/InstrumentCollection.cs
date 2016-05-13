@@ -16,8 +16,12 @@ namespace Portfolio
         {
             get; set;
         }
+        public List<FX> FXItems
+        {
+            get;set;
+        }
 
-        public void Fill(DateTime valuationDate)
+        public void Fill(DateTime valuationDate, string reportingISO)
         {
             InstrumentItems = new List<Instrument>();
             SqlDataAdapter da = new SqlDataAdapter();
@@ -32,7 +36,16 @@ namespace Portfolio
                 Instrument ins = new Instrument(dr);
                 InstrumentItems.Add(ins);
             }
-            
+
+            FXItems = new List<FX>();
+            InstrumentItems.Where(p => p.InstrumentType == "CURNCY").ToList().ForEach(p => FXItems.Add(new FX(p)));
+
+            foreach(Instrument i in InstrumentItems)
+            {
+                i.FXPrice = FXItems.First(p => p.ISOLocal == i.PriceCurrencyID && p.ISOReporting == reportingISO);
+                i.FXIncome = FXItems.First(p => p.ISOLocal == i.DivCurrencyID && p.ISOReporting == reportingISO);
+            }
         }
+        
     }
 }

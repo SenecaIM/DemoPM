@@ -41,7 +41,7 @@ namespace Portfolio
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            inst.Fill(DateTime.Now);
+            inst.Fill(DateTime.Now, "GBP");
             IDColumn.AspectName = "ID";
             InstrumentIDColumn.AspectName = "Identifier.InstrumentID";
             InstrumentDateColumn.AspectName = "InstrumentDate";
@@ -57,7 +57,8 @@ namespace Portfolio
             //PriceLast.AspectName = "PriceLast";
             //PriceNAV.AspectName = "PriceNAV";
             //PriceCurrencyID.AspectName = "PriceCurrencyID";
-            PriceColumn.AspectName = "Price";
+            PriceReportingColumn.AspectName = "PriceReporting";
+            DetailColumn.AspectName = "ToString";
             //DivGross.AspectName = "DivGross";
             //DivCurrencyID.AspectName = "DivCurrencyID";
             //DivFactor.AspectName = "DivFactor";
@@ -102,20 +103,20 @@ namespace Portfolio
             Refresh();
         }
 
-        private void Refresh()
+        private void Refresh(string currencyID)
         {
-            inst.Fill(fromDatePicker.Value);
+            inst.Fill(fromDatePicker.Value, currencyID);
             portfolioOLV.SetObjects(inst.InstrumentItems);
         }
-        private void Refresh2()
+        private void Refresh2(string currencyID)
         {
-            inst.Fill(fromDatePicker.Value);
+            inst.Fill(fromDatePicker.Value, currencyID);
             portfolioOLV.SetObjects(inst.InstrumentItems.Where(p=>p.InstrumentDate > toDatePicker.Value.Date).ToList<Instrument>());
         }
 
         private void toDatePicker_ValueChanged(object sender, EventArgs e)
         {
-            Refresh2();
+            Refresh2("GBP");
         }
     }
 }

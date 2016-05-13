@@ -42,7 +42,7 @@ namespace Portfolio
         [Description("Price to be used in valuation of the Instrument")]
         [Category("Price and Income")]
         [DisplayName("Price")]
-        public decimal Price { get
+        public decimal PriceLocal { get
             {
                 if (PriceMid != 0)
                 {
@@ -65,6 +65,15 @@ namespace Portfolio
                     return PriceLast;
                 }
             } }
+
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [Description("Price to be used in valuation of the Instrument")]
+        [Category("Price and Income")]
+        [DisplayName("Price Reporting")]
+        public decimal PriceReporting
+        { get { return PriceLocal / FXPrice.RateReporting; } }
+
         [Browsable(true)]
         [ReadOnly(true)]
         [Description("The personal ID number of a particular stock")]
@@ -197,6 +206,26 @@ namespace Portfolio
         [DisplayName("FixedAccuredIntrest")]
         public decimal FixedAccuredInterest { get; set; }
 
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [Description("FX used in calculating the price")]
+        [Category("Price")]
+        [DisplayName("FXPrice")]
+        public FX FXPrice { get; set; }
+
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [Description("Describes the income of a particulat stock")]
+        [Category("Price")]
+        [DisplayName("FXIncome")]
+        public FX FXIncome { get; set; }
+
+        public override string ToString()
+        {
+            return
+                "Local Price " + this.PriceLocal.ToString("#,##0.00") + "(" + this.FXPrice.ISOLocal + ")," + 
+                " Reporting Price " + this.PriceReporting.ToString("#,##0.00") + "(" + this.FXPrice.ISOReporting + ")";
+        }
 
     }
 }

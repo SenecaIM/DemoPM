@@ -36,12 +36,13 @@
             this.TickerColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.Sedol1Column = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.InstrumentNameColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.PriceColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.PriceReportingColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.btnDetailsShow = new System.Windows.Forms.Button();
             this.fromDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.DetailColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             ((System.ComponentModel.ISupportInitialize)(this.portfolioOLV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.portfolioOLV.AllColumns.Add(this.TickerColumn);
             this.portfolioOLV.AllColumns.Add(this.Sedol1Column);
             this.portfolioOLV.AllColumns.Add(this.InstrumentNameColumn);
-            this.portfolioOLV.AllColumns.Add(this.PriceColumn);
+            this.portfolioOLV.AllColumns.Add(this.PriceReportingColumn);
+            this.portfolioOLV.AllColumns.Add(this.DetailColumn);
             this.portfolioOLV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -67,7 +69,8 @@
             this.TickerColumn,
             this.Sedol1Column,
             this.InstrumentNameColumn,
-            this.PriceColumn});
+            this.PriceReportingColumn,
+            this.DetailColumn});
             this.portfolioOLV.Cursor = System.Windows.Forms.Cursors.Default;
             this.portfolioOLV.FullRowSelect = true;
             this.portfolioOLV.HighlightBackgroundColor = System.Drawing.Color.Empty;
@@ -118,10 +121,10 @@
             this.InstrumentNameColumn.Text = "InstrumentName";
             this.InstrumentNameColumn.Width = 93;
             // 
-            // PriceColumn
+            // PriceReportingColumn
             // 
-            this.PriceColumn.Text = "Price";
-            this.PriceColumn.Width = 292;
+            this.PriceReportingColumn.Text = "Price";
+            this.PriceReportingColumn.Width = 97;
             // 
             // btnDetailsShow
             // 
@@ -170,6 +173,11 @@
             this.toDatePicker.TabIndex = 12;
             this.toDatePicker.ValueChanged += new System.EventHandler(this.toDatePicker_ValueChanged);
             // 
+            // DetailColumn
+            // 
+            this.DetailColumn.FillsFreeSpace = true;
+            this.DetailColumn.Text = "Details";
+            // 
             // InstrumentControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,7 +211,8 @@
         private BrightIdeasSoftware.OLVColumn TickerColumn;
         private BrightIdeasSoftware.OLVColumn Sedol1Column;
         private BrightIdeasSoftware.OLVColumn InstrumentNameColumn;
-        private BrightIdeasSoftware.OLVColumn PriceColumn;
+        private BrightIdeasSoftware.OLVColumn PriceReportingColumn;
+        private BrightIdeasSoftware.OLVColumn DetailColumn;
     }
 }
 

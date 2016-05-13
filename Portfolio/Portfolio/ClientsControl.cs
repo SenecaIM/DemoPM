@@ -61,6 +61,7 @@ namespace Portfolio
             ClientNameColumn.AspectName = "ClientName";
             CurrencyID.AspectName = "CurrencyID";
             AddressColumn.AspectName = "Address";
+
             clientOLV.SetObjects(cli.ClientItems);
             
         }
