@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 624);
+            this.ClientSize = new System.Drawing.Size(928, 674);
             this.Controls.Add(this.btnDetailsShow);
             this.Controls.Add(this.navibar1);
             this.Name = "Main";

@@ -108,6 +108,9 @@
     <EmbeddedResource Include="Navibar.resx">
       <DependentUpon>Navibar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PortfolioControl.resx">
+      <DependentUpon>PortfolioControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

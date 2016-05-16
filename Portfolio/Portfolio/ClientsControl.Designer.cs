@@ -33,11 +33,14 @@
             this.ClientNameColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.CurrencyID = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.AddressColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.Confirm = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             ((System.ComponentModel.ISupportInitialize)(this.clientOLV)).BeginInit();
             this.SuspendLayout();
             // 
             // clientOLV
             // 
+            this.clientOLV.AllColumns.Add(this.Confirm);
             this.clientOLV.AllColumns.Add(this.IDColumn);
             this.clientOLV.AllColumns.Add(this.ClientNameColumn);
             this.clientOLV.AllColumns.Add(this.CurrencyID);
@@ -47,6 +50,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientOLV.CellEditUseWholeCell = false;
             this.clientOLV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Confirm,
             this.IDColumn,
             this.ClientNameColumn,
             this.CurrencyID,
@@ -58,7 +62,7 @@
             this.clientOLV.Location = new System.Drawing.Point(12, 183);
             this.clientOLV.Name = "clientOLV";
             this.clientOLV.ShowGroups = false;
-            this.clientOLV.Size = new System.Drawing.Size(728, 459);
+            this.clientOLV.Size = new System.Drawing.Size(728, 460);
             this.clientOLV.TabIndex = 15;
             this.clientOLV.UseCompatibleStateImageBehavior = false;
             this.clientOLV.View = System.Windows.Forms.View.Details;
@@ -85,13 +89,28 @@
             this.AddressColumn.Text = "Address";
             this.AddressColumn.Width = 274;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(631, 580);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 62);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Display client\'s portfolio";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // Confirm
+            // 
+            this.Confirm.CheckBoxes = true;
+            this.Confirm.Text = "Confirm";
+            // 
             // ClientsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.clientOLV);
             this.Name = "ClientsControl";
-            this.Size = new System.Drawing.Size(911, 827);
+            this.Size = new System.Drawing.Size(911, 828);
             this.Load += new System.EventHandler(this.ClientsControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientOLV)).EndInit();
             this.ResumeLayout(false);
@@ -106,5 +125,7 @@
         private BrightIdeasSoftware.OLVColumn ClientNameColumn;
         private BrightIdeasSoftware.OLVColumn CurrencyID;
         private BrightIdeasSoftware.OLVColumn AddressColumn;
+        private System.Windows.Forms.Button button1;
+        private BrightIdeasSoftware.OLVColumn Confirm;
     }
 }
