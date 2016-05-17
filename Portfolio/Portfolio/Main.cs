@@ -37,20 +37,27 @@ namespace Portfolio
         }
         private void AddInstruments()
         {
-            removeControls();
             InstrumentControl con = new InstrumentControl();
-            con.Location = new Point(1, 1);
+            LayoutControl(con);
             con.ShowObject += new EventHandler(con1_ShowObj);
-            this.Controls.Add(con);
-
         }
-        private void AddClients()
+
+        private void LayoutControl(Control con)
         {
             removeControls();
+            con.Location = panel1.Location;
+            con.Size = panel1.Size;
+            con.Anchor = panel1.Anchor;
+            this.Controls.Add(con);
+        }
+
+        private void AddClients()
+        {
+
             ClientsControl cl1 = new ClientsControl();
-            cl1.Location = new Point(1, 1);
+            LayoutControl(cl1);
             cl1.ShowObject += new EventHandler(cl1_ShowObject);
-            this.Controls.Add(cl1);
+
         }
        
         private void cl1_ShowObject(object sender, EventArgs e)
@@ -119,6 +126,11 @@ namespace Portfolio
                 prop1.SetLocation((Form)this);
                 btnDetailsShow.Text = "Hide Details";
             }
+        }
+
+        private void navibar1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

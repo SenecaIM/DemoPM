@@ -69,13 +69,14 @@
             this.PriceReportingColumn,
             this.DetailColumn});
             this.portfolioOLV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.portfolioOLV.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.portfolioOLV.FullRowSelect = true;
             this.portfolioOLV.HighlightBackgroundColor = System.Drawing.Color.Empty;
             this.portfolioOLV.HighlightForegroundColor = System.Drawing.Color.Empty;
-            this.portfolioOLV.Location = new System.Drawing.Point(12, 187);
+            this.portfolioOLV.Location = new System.Drawing.Point(0, 49);
             this.portfolioOLV.Name = "portfolioOLV";
             this.portfolioOLV.ShowGroups = false;
-            this.portfolioOLV.Size = new System.Drawing.Size(894, 459);
+            this.portfolioOLV.Size = new System.Drawing.Size(917, 468);
             this.portfolioOLV.TabIndex = 1;
             this.portfolioOLV.UseCompatibleStateImageBehavior = false;
             this.portfolioOLV.View = System.Windows.Forms.View.Details;
@@ -90,18 +91,19 @@
             // 
             this.InstrumentIDColumn.AspectName = "";
             this.InstrumentIDColumn.Text = "InstrumentID";
-            this.InstrumentIDColumn.Width = 76;
+            this.InstrumentIDColumn.Width = 89;
             // 
             // InstrumentDateColumn
             // 
             this.InstrumentDateColumn.AspectName = "";
             this.InstrumentDateColumn.Text = "InstrumentDate";
-            this.InstrumentDateColumn.Width = 87;
+            this.InstrumentDateColumn.Width = 109;
             // 
             // ISINColumn
             // 
             this.ISINColumn.AspectName = "";
             this.ISINColumn.Text = "ISIN";
+            this.ISINColumn.Width = 84;
             // 
             // TickerColumn
             // 
@@ -116,12 +118,12 @@
             // InstrumentNameColumn
             // 
             this.InstrumentNameColumn.Text = "InstrumentName";
-            this.InstrumentNameColumn.Width = 93;
+            this.InstrumentNameColumn.Width = 121;
             // 
             // PriceReportingColumn
             // 
             this.PriceReportingColumn.Text = "Price";
-            this.PriceReportingColumn.Width = 97;
+            this.PriceReportingColumn.Width = 63;
             // 
             // DetailColumn
             // 
@@ -130,18 +132,20 @@
             // 
             // fromDatePicker
             // 
-            this.fromDatePicker.Location = new System.Drawing.Point(247, 31);
+            this.fromDatePicker.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromDatePicker.Location = new System.Drawing.Point(0, 23);
             this.fromDatePicker.Name = "fromDatePicker";
-            this.fromDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.fromDatePicker.Size = new System.Drawing.Size(200, 21);
             this.fromDatePicker.TabIndex = 9;
             this.fromDatePicker.ValueChanged += new System.EventHandler(this.fromDatePicker_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 12);
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Maximum Date";
             // 
@@ -153,7 +157,7 @@
             this.Controls.Add(this.fromDatePicker);
             this.Controls.Add(this.portfolioOLV);
             this.Name = "InstrumentControl";
-            this.Size = new System.Drawing.Size(918, 658);
+            this.Size = new System.Drawing.Size(920, 520);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.portfolioOLV)).EndInit();
             this.ResumeLayout(false);

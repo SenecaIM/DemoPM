@@ -28,37 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.navibar1 = new Portfolio.Navibar();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnDetailsShow = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.navibar1 = new Portfolio.Navibar();
             this.SuspendLayout();
-            // 
-            // navibar1
-            // 
-            this.navibar1.Location = new System.Drawing.Point(13, 13);
-            this.navibar1.Name = "navibar1";
-            this.navibar1.Size = new System.Drawing.Size(207, 111);
-            this.navibar1.TabIndex = 0;
             // 
             // btnDetailsShow
             // 
             this.btnDetailsShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDetailsShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetailsShow.Location = new System.Drawing.Point(13, 141);
+            this.btnDetailsShow.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnDetailsShow.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnDetailsShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetailsShow.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailsShow.Image = ((System.Drawing.Image)(resources.GetObject("btnDetailsShow.Image")));
+            this.btnDetailsShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetailsShow.Location = new System.Drawing.Point(755, 12);
             this.btnDetailsShow.Name = "btnDetailsShow";
-            this.btnDetailsShow.Size = new System.Drawing.Size(145, 31);
+            this.btnDetailsShow.Size = new System.Drawing.Size(161, 46);
             this.btnDetailsShow.TabIndex = 20;
             this.btnDetailsShow.Tag = "false";
             this.btnDetailsShow.Text = "Show Details ";
-            this.btnDetailsShow.UseVisualStyleBackColor = true;
+            this.btnDetailsShow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDetailsShow.UseVisualStyleBackColor = false;
             this.btnDetailsShow.Click += new System.EventHandler(this.btnDetailsShow_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Location = new System.Drawing.Point(12, 188);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(904, 483);
+            this.panel1.TabIndex = 21;
+            this.panel1.Visible = false;
+            // 
+            // navibar1
+            // 
+            this.navibar1.BackColor = System.Drawing.Color.SteelBlue;
+            this.navibar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("navibar1.BackgroundImage")));
+            this.navibar1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navibar1.Location = new System.Drawing.Point(12, 12);
+            this.navibar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navibar1.Name = "navibar1";
+            this.navibar1.Size = new System.Drawing.Size(277, 109);
+            this.navibar1.TabIndex = 22;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(928, 674);
-            this.Controls.Add(this.btnDetailsShow);
             this.Controls.Add(this.navibar1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnDetailsShow);
             this.Name = "Main";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
@@ -67,8 +92,8 @@
         }
 
         #endregion
-
-        private Navibar navibar1;
         private System.Windows.Forms.Button btnDetailsShow;
+        private System.Windows.Forms.Panel panel1;
+        private Navibar navibar1;
     }
 }

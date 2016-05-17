@@ -35,13 +35,6 @@ namespace Portfolio
         {
             showInstruments(sender, e);
         }
-
-        private void btnPortfolio_Click(object sender, EventArgs e)
-        {
-            showPortfolio(sender, e);
-        }
-
-        
         }
     }
 
