@@ -11,7 +11,7 @@ namespace Portfolio
     public class FX
     {
    
-        public FX(Instrument instrument)
+        public FX(Instrument instrument, CurrencySymbol symbolLocal, CurrencySymbol symbolReporting)
         {
             ID = instrument.ID;
             CurrencyName = instrument.Identifier.InstrumentName;
@@ -19,8 +19,10 @@ namespace Portfolio
             ISOReporting = instrument.Identifier.Ticker.Substring(0, 3);
             RateLocal = 1;
             RateReporting = instrument.PriceLocal;
+            SymbolLocal = symbolLocal;
+            SymbolReporting = symbolReporting;
+            
         }
-
         [Browsable(true)] 
         [ReadOnly(true)]
         [Description("Unique ID number assigned to each price")]
@@ -69,5 +71,17 @@ namespace Portfolio
         [Category("Price")]
         [DisplayName("RateReporting")]
         public decimal RateReporting { get; set; }
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [Description("Reporting price currency symbol")]
+        [Category("Currency and Exchange")]
+        [DisplayName("SymbolReporting")]
+        public CurrencySymbol SymbolReporting { get; private set; }
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [Description("Local price currency symbol")]
+        [Category("Currency and Exchange")]
+        [DisplayName("SymbolLocal")]
+        public CurrencySymbol SymbolLocal { get; private set; }
     }
 }

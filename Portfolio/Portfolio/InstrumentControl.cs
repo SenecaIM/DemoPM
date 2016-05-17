@@ -44,7 +44,7 @@ namespace Portfolio
             //PriceLast.AspectName = "PriceLast";
             //PriceNAV.AspectName = "PriceNAV";
             //PriceCurrencyID.AspectName = "PriceCurrencyID";
-            PriceReportingColumn.AspectName = "PriceReporting";
+            PriceDisplayColumn.AspectName = "PriceDisplay";
             DetailColumn.AspectName = "ToString";
             //DivGross.AspectName = "DivGross";
             //DivCurrencyID.AspectName = "DivCurrencyID";

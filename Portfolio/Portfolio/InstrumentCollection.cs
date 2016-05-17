@@ -20,6 +20,10 @@ namespace Portfolio
         {
             get;set;
         }
+        public List<CurrencySymbol> SymbolItems
+        {
+            get;set;
+        }
 
         public void Fill(DateTime valuationDate, string reportingISO)
         {
@@ -31,20 +35,36 @@ namespace Portfolio
             cmd.Parameters.Add("ValuationDate", valuationDate.Date);
             da.Fill(ds);
             DataTable dtInstrument = ds.Tables[0];
+            DataTable dtSymbols = ds.Tables[1];
             foreach (DataRow dr in dtInstrument.Rows)
             {
                 Instrument ins = new Instrument(dr);
                 InstrumentItems.Add(ins);
             }
 
+            SymbolItems = new List<CurrencySymbol>();
+
+            foreach(DataRow dr in dtSymbols.Rows)
+            {
+                CurrencySymbol crs = new CurrencySymbol(dr);
+                SymbolItems.Add(crs);
+            }
+
             FXItems = new List<FX>();
-            InstrumentItems.Where(p => p.InstrumentType == "CURNCY").ToList().ForEach(p => FXItems.Add(new FX(p)));
+
+            InstrumentItems.Where(p => p.InstrumentType == "CURNCY").ToList().ForEach(p => FXItems.Add(
+                new FX(p, getSymbol(p.PriceCurrencyID), getSymbol(reportingISO))));
 
             foreach(Instrument i in InstrumentItems)
             {
                 i.FXPrice = FXItems.First(p => p.ISOLocal == i.PriceCurrencyID && p.ISOReporting == reportingISO);
                 i.FXIncome = FXItems.First(p => p.ISOLocal == i.DivCurrencyID && p.ISOReporting == reportingISO);
             }
+        }
+
+        private CurrencySymbol getSymbol(string currencyID)
+        {
+            return SymbolItems.Find(p => p.CurrencyID == currencyID);
         }
         
     }

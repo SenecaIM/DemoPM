@@ -37,6 +37,10 @@ namespace Portfolio
             
 
         }
+        public string PriceDisplay { get { return this.FXPrice.SymbolReporting.SymbolLarge + this.PriceReporting.ToString("#,##0.00") + this.FXPrice.SymbolReporting.SymbolSmall; } }
+        
+            
+        
         [Browsable(true)]
         [ReadOnly(true)]
         [Description("Price to be used in valuation of the Instrument")]
@@ -227,5 +231,6 @@ namespace Portfolio
                 " Reporting Price " + this.PriceReporting.ToString("#,##0.00") + "(" + this.FXPrice.ISOReporting + ")";
         }
 
+        
     }
 }

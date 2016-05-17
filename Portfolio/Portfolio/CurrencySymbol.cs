@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Portfolio
 {
     [TypeConverter(typeof(ExpandableObjectConverter))]
-    class CurrencySymbol
+    public class CurrencySymbol
     {
         
         public CurrencySymbol(DataRow row)
