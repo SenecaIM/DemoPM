@@ -62,6 +62,12 @@ namespace Portfolio
             ShowObject((Client)o.SelectedObject, e);
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PortfolioForm pr = new PortfolioForm();
+            pr.Show();
+        }
     }
 }
 
