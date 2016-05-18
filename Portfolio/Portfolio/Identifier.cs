@@ -25,7 +25,7 @@ namespace Portfolio
         [Description("The personal ID number of a particular stock")]
         [Category("Information")]
         [DisplayName("ID")]
-        public int ID { get; set; }
+        public int ID { get; private set; }
 
         [Browsable(true)]
         [ReadOnly(true)]

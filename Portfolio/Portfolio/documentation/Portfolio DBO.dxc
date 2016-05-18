@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentFile Version="2010" Moniker="&lt;Database Name=&quot;Portfolio DBO&quot; DatabaseType=&quot;SqlServer&quot;&gt;&#xD;&#xA;  &lt;UserName&gt;&lt;/UserName&gt;&#xD;&#xA;  &lt;ServerInstance&gt;VMPC049&lt;/ServerInstance&gt;&#xD;&#xA;  &lt;Database&gt;Portfolio&lt;/Database&gt;&#xD;&#xA;  &lt;SqlServerAuthenticationMode&gt;WindowsIntegrated&lt;/SqlServerAuthenticationMode&gt;&#xD;&#xA;&lt;/Database&gt;" DocType="DX.DB" IsLocalizationDisabled="false">
+  <RelatedProject>documentation.dxp</RelatedProject>
+  <State>
+    <Attributes />
+  </State>
+  <LastSelectedItem />
+  <Filters />
+</ContentFile>

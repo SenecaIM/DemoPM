@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>dbo.spClient Stored Procedure</title>
+    <meta name="Title" content="" />
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="script/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery-ui-1.8.18.custom.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery.qtip.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/dx.db.2012.css" data-mshv2-stylesheet="/stylesheets/dx.db.2012.mshv2.css" data-mshv1-stylesheet="/stylesheets/dx.db.2012.mshv1.css" />
+    <script src="script/dx.db.jqueryplugins.2012.min.js" type="text/javascript">
+</script>
+    <script src="script/dx.db.2012.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="Portfolio DBO_db~s-dbo~p-spClient" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/slimbox2.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/hs-jquery-common.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/hs-jquery-slimbox.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/hs-jquery-expand.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/hs-expandcollapse.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/hs-boxes.css" />
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript">
+</script>
+    <script src="script/slimbox2.js" type="text/javascript">
+</script>
+    <script src="script/hs-jquery-common.js" type="text/javascript">
+</script>
+    <script src="script/jquery-expand.js" type="text/javascript">
+</script>
+    <script src="script/hs-expandcollapse.js" type="text/javascript">
+</script>
+    <script src="script/jquery.fitvids.js" type="text/javascript">
+</script>
+    <script src="script/swfobject.js" type="text/javascript">
+</script>
+</head>
+
+<body>
+    <div id="BeforeHeaderContent"></div>
+
+    <div id="HeaderContent">
+        <div id="ProjectTitle">
+            Visual Studio 2010-2015
+        </div>
+
+        <div id="PageTitle">
+            <div id="PageTitleText">
+                dbo.spClient Stored Procedure
+            </div>
+        </div>
+    </div>
+
+    <div id="AfterHeaderContent">
+        <!-- Spacing --> <span id="ToggleAllSectionsLink" class="FunctionLink"><label id="CollapseAllLabel">Collapse All</label>&#160;<label id="ExpandAllLabel" style="display: none;">Expand All</label></span>
+    </div>
+
+    <div class="BreadcrumbsContainer">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=Portfolio DBO_db">Portfolio DBO Database</a> &gt; <a href="ms-xhelp:///?id=Portfolio DBO_db~s-dbo">dbo Schema</a> : dbo.spClient Stored Procedure</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="BodyContent">
+        <div class="SectionHeading" id="propertiesSectionHeading">
+            <span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">Properties</span>
+        </div>
+
+        <div id="propertiesSectionContent" class="SectionContent">
+            <table class="PropertyListTable">
+                <tr>
+                    <td>Creation Date</td>
+
+                    <td>12/05/2016 10:40</td>
+                </tr>
+
+                <tr>
+                    <td>Encrypted</td>
+
+                    <td><img src="dbimages/boolean-false.gif" /></td>
+                </tr>
+
+                <tr>
+                    <td>Ansi Nulls</td>
+
+                    <td><img src="dbimages/boolean-true.gif" /></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="SectionHeading" id="parametersSectionHeading">
+            <span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">Parameters</span>
+        </div>
+
+        <div id="parametersSectionContent" class="SectionContent">
+            <table class="ColumnListTable">
+                <tr>
+                    <th>Parameter</th>
+
+                    <th nowrap="nowrap">Direction</th>
+
+                    <th nowrap="nowrap">Description</th>
+
+                    <th nowrap="nowrap">Data Type</th>
+
+                    <th nowrap="nowrap">Size</th>
+                </tr>
+
+                <tr>
+                    <td class="LinkCell">@RETURN_VALUE</td>
+
+                    <td>Return Value</td>
+
+                    <td class="DescriptionCell">&#160;</td>
+
+                    <td>Integer</td>
+
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="SectionHeading" id="parentsSectionHeading">
+            <span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">Objects that dbo.spClient depends on</span>
+        </div>
+
+        <div id="parentsSectionContent" class="SectionContent">
+            <table class="DependencyListTable">
+                <tr>
+                    <th>&#160;</th>
+
+                    <th nowrap="nowrap">Database Object</th>
+
+                    <th nowrap="nowrap">Object Type</th>
+
+                    <th class="DescriptionCell">Description</th>
+
+                    <th nowrap="nowrap">Dep Level</th>
+                </tr>
+
+                <tr>
+                    <td><img src="dbimages/db-table.gif" alt="dbo.tblClients table" /></td>
+
+                    <td class="namecell"><a href="ms-xhelp:///?id=Portfolio DBO_db~s-dbo~t-tblClients">dbo.tblClients</a></td>
+
+                    <td nowrap="nowrap">Table</td>
+
+                    <td class="DescriptionCell">&#160;</td>
+
+                    <td align="right">1</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="SectionHeading" id="sourceSectionHeading">
+            <span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">Procedure Source Code</span>
+        </div>
+
+        <div id="sourceSectionContent" class="SectionContent">
+            <table class="sqlsource" border="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <pre>
+<code><span style="color: #008080;">-- =============================================
+-- Author:        &lt;Author,,Name&gt;
+-- Create date: &lt;Create Date,,&gt;
+-- Description:    &lt;Description,,&gt;
+-- =============================================
+</span><span style="color: #0000FF;">CREATE</span>&#160;<span style="color: #0000FF;">PROCEDURE</span>&#160;<span style="color: #FF0000;">[dbo]</span>.<span style="color: #FF0000;">[spClient]</span>&#160;
+&#160;&#160;&#160;&#160;<span style="color: #008080;">-- Add the parameters for the stored procedure here
+</span>&#160;&#160;&#160;&#160;
+<span style="color: #0000FF;">AS</span>
+&#160;
+<span style="color: #0000FF;">BEGIN</span>
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;<span style="color: #0000FF;">SET</span> NOCOUNT <span style="color: #0000FF;">ON</span>;
+
+    
+    <span style="color: #0000FF;">SELECT</span>&#160;<span style="color: #FF0000;">[ID]</span>
+      ,<span style="color: #FF0000;">[ClientName]</span>
+      ,<span style="color: #FF0000;">[CurrencyID]</span>
+      ,<span style="color: #FF0000;">[Address]</span>
+      ,<span style="color: #FF0000;">[Capital]</span>
+      ,<span style="color: #FF0000;">[ClientType]</span>
+      ,<span style="color: #FF0000;">[Company]</span>
+      ,<span style="color: #FF0000;">[TelephoneNumber]</span>
+&#160;&#160;<span style="color: #0000FF;">FROM</span>&#160;<span style="color: #FF0000;">[Portfolio]</span>.<span style="color: #FF0000;">[dbo]</span>.<span style="color: #FF0000;">[tblClients]</span>
+&#160;
+<span style="color: #0000FF;">END</span>
+</code>
+</pre>
+                    </td>
+                </tr>
+            </table>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="SectionHeading" id="seealsoSectionHeading">
+            <span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">See Also</span>
+        </div>
+
+        <div id="seealsoSectionContent" class="SectionContent">
+            <h4 class="dxh4">Related Objects</h4>
+
+            <p><a href="ms-xhelp:///?id=Portfolio DBO_db~s-dbo">dbo Schema</a><br />
+            <a href="ms-xhelp:///?id=Portfolio DBO_db">Portfolio DBO Database</a></p>
+        </div>
+    </div>
+
+    <div id="FooterContent">
+        <p>&#160;</p>
+
+        <p>&#160;</p>
+        <hr style="height: 1px" />
+
+        <p>© 2016 All Rights Reserved.</p><a href="mailto:support@company.com?subject=Documentation Feedback: Portfolio DBO_db~s-dbo~p-spClient.html">Send comments</a> on this topic.
+    </div>
+</body>
+</html>

@@ -26,7 +26,10 @@ namespace Portfolio
         }
         public void SetObject(object obj)
         {
-            propertyGrid.SelectedObject = obj;
+            if (obj != null)
+            {
+                propertyGrid.SelectedObject = obj;
+            }
         }
 
         private void propertyGrid_Click(object sender, EventArgs e)

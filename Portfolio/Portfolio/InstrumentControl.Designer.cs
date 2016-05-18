@@ -76,7 +76,7 @@
             this.portfolioOLV.Location = new System.Drawing.Point(0, 49);
             this.portfolioOLV.Name = "portfolioOLV";
             this.portfolioOLV.ShowGroups = false;
-            this.portfolioOLV.Size = new System.Drawing.Size(917, 468);
+            this.portfolioOLV.Size = new System.Drawing.Size(1170, 468);
             this.portfolioOLV.TabIndex = 1;
             this.portfolioOLV.UseCompatibleStateImageBehavior = false;
             this.portfolioOLV.View = System.Windows.Forms.View.Details;
@@ -97,7 +97,7 @@
             // 
             this.InstrumentDateColumn.AspectName = "";
             this.InstrumentDateColumn.Text = "InstrumentDate";
-            this.InstrumentDateColumn.Width = 109;
+            this.InstrumentDateColumn.Width = 135;
             // 
             // ISINColumn
             // 
@@ -114,16 +114,17 @@
             // 
             this.Sedol1Column.AspectName = "";
             this.Sedol1Column.Text = "Sedol1";
+            this.Sedol1Column.Width = 72;
             // 
             // InstrumentNameColumn
             // 
             this.InstrumentNameColumn.Text = "InstrumentName";
             this.InstrumentNameColumn.Width = 121;
             // 
-            // PriceReportingColumn
+            // PriceDisplayColumn
             // 
             this.PriceDisplayColumn.Text = "Price";
-            this.PriceDisplayColumn.Width = 63;
+            this.PriceDisplayColumn.Width = 72;
             // 
             // DetailColumn
             // 

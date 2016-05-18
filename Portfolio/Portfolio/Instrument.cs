@@ -84,6 +84,7 @@ namespace Portfolio
         [Category("Information")]
         [DisplayName("ID")]
         public int ID { get { return Identifier.ID; } }
+
         [Browsable(true)]
         [ReadOnly(true)]
         [Description("Contains Instrument identifier information")]

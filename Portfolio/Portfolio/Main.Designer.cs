@@ -43,7 +43,7 @@
             this.btnDetailsShow.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetailsShow.Image = ((System.Drawing.Image)(resources.GetObject("btnDetailsShow.Image")));
             this.btnDetailsShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetailsShow.Location = new System.Drawing.Point(755, 12);
+            this.btnDetailsShow.Location = new System.Drawing.Point(990, 12);
             this.btnDetailsShow.Name = "btnDetailsShow";
             this.btnDetailsShow.Size = new System.Drawing.Size(161, 46);
             this.btnDetailsShow.TabIndex = 20;
@@ -60,7 +60,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Location = new System.Drawing.Point(12, 188);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(904, 483);
+            this.panel1.Size = new System.Drawing.Size(1139, 483);
             this.panel1.TabIndex = 21;
             this.panel1.Visible = false;
             // 
@@ -80,7 +80,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(928, 674);
+            this.ClientSize = new System.Drawing.Size(1163, 674);
             this.Controls.Add(this.navibar1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDetailsShow);

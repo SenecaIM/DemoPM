@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+    <meta name="Microsoft.Help.SelfBranded" content="true" />
+
+    <title>dbo.spInstrumentDate Stored Procedure</title>
+    <meta name="Title" content="" />
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script">
+</script>
+    <script src="script/jquery-ui-1.8.18.custom.min.js" type="text/javascript">
+</script>
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery-ui-1.8.18.custom.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery.qtip.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/dx.db.2012.css" data-mshv2-stylesheet="/stylesheets/dx.db.2012.mshv2.css" data-mshv1-stylesheet="/stylesheets/dx.db.2012.mshv1.css" />
+    <script src="script/dx.db.jqueryplugins.2012.min.js" type="text/javascript">
+</script>
+    <script src="script/dx.db.2012.js" type="text/javascript">
+</script>
+    <meta name="Microsoft.Help.Id" content="Portfolio DBO_db~s-dbo~p-spInstrumentDate" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="Microsoft.Help.Locale" content="en-US" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-US" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/slimbox2.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/hs-jquery-common.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/hs-jquery-slimbox.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/hs-jquery-expand.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/hs-expandcollapse.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/hs-boxes.css" />
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript">
+</script>
+    <script src="script/slimbox2.js" type="text/javascript">
+</script>
+    <script src="script/hs-jquery-common.js" type="text/javascript">
+</script>
+    <script src="script/jquery-expand.js" type="text/javascript">
+</script>
+    <script src="script/hs-expandcollapse.js" type="text/javascript">
+</script>
+    <script src="script/jquery.fitvids.js" type="text/javascript">
+</script>
+    <script src="script/swfobject.js" type="text/javascript">
+</script>
+</head>
+
+<body>
+    <div id="BeforeHeaderContent"></div>
+
+    <div id="HeaderContent">
+        <div id="ProjectTitle">
+            Visual Studio 2010-2015
+        </div>
+
+        <div id="PageTitle">
+            <div id="PageTitleText">
+                dbo.spInstrumentDate Stored Procedure
+            </div>
+        </div>
+    </div>
+
+    <div id="AfterHeaderContent">
+        <!-- Spacing --> <span id="ToggleAllSectionsLink" class="FunctionLink"><label id="CollapseAllLabel">Collapse All</label>&#160;<label id="ExpandAllLabel" style="display: none;">Expand All</label></span>
+    </div>
+
+    <div class="BreadcrumbsContainer">
+        <table>
+            <tr>
+                <td><a href="ms-xhelp:///?id=Portfolio DBO_db">Portfolio DBO Database</a> &gt; <a href="ms-xhelp:///?id=Portfolio DBO_db~s-dbo">dbo Schema</a> : dbo.spInstrumentDate Stored Procedure</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="BodyContent">
+        <div class="SectionHeading" id="propertiesSectionHeading">
+            <span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">Properties</span>
+        </div>
+
+        <div id="propertiesSectionContent" class="SectionContent">
+            <table class="PropertyListTable">
+                <tr>
+                    <td>Creation Date</td>
+
+                    <td>06/05/2016 14:30</td>
+                </tr>
+
+                <tr>
+                    <td>Encrypted</td>
+
+                    <td><img src="dbimages/boolean-false.gif" /></td>
+                </tr>
+
+                <tr>
+                    <td>Ansi Nulls</td>
+
+                    <td><img src="dbimages/boolean-true.gif" /></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="SectionHeading" id="parametersSectionHeading">
+            <span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">Parameters</span>
+        </div>
+
+        <div id="parametersSectionContent" class="SectionContent">
+            <table class="ColumnListTable">
+                <tr>
+                    <th>Parameter</th>
+
+                    <th nowrap="nowrap">Direction</th>
+
+                    <th nowrap="nowrap">Description</th>
+
+                    <th nowrap="nowrap">Data Type</th>
+
+                    <th nowrap="nowrap">Size</th>
+                </tr>
+
+                <tr>
+                    <td class="LinkCell">@ValuationDate</td>
+
+                    <td>In</td>
+
+                    <td class="DescriptionCell">&#160;</td>
+
+                    <td>DBTimeStamp</td>
+
+                    <td>4</td>
+                </tr>
+
+                <tr>
+                    <td class="LinkCell">@RETURN_VALUE</td>
+
+                    <td>Return Value</td>
+
+                    <td class="DescriptionCell">&#160;</td>
+
+                    <td>Integer</td>
+
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="SectionHeading" id="parentsSectionHeading">
+            <span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">Objects that dbo.spInstrumentDate depends on</span>
+        </div>
+
+        <div id="parentsSectionContent" class="SectionContent">
+            <table class="DependencyListTable">
+                <tr>
+                    <th>&#160;</th>
+
+                    <th nowrap="nowrap">Database Object</th>
+
+                    <th nowrap="nowrap">Object Type</th>
+
+                    <th class="DescriptionCell">Description</th>
+
+                    <th nowrap="nowrap">Dep Level</th>
+                </tr>
+
+                <tr>
+                    <td><img src="dbimages/db-table.gif" alt="dbo.tblCurrencySymbol table" /></td>
+
+                    <td class="namecell"><a href="ms-xhelp:///?id=Portfolio DBO_db~s-dbo~t-tblCurrencySymbol">dbo.tblCurrencySymbol</a></td>
+
+                    <td nowrap="nowrap">Table</td>
+
+                    <td class="DescriptionCell">&#160;</td>
+
+                    <td align="right">1</td>
+                </tr>
+
+                <tr>
+                    <td><img src="dbimages/db-table.gif" alt="dbo.tblInstrument table" /></td>
+
+                    <td class="namecell"><a href="ms-xhelp:///?id=Portfolio DBO_db~s-dbo~t-tblInstrument">dbo.tblInstrument</a></td>
+
+                    <td nowrap="nowrap">Table</td>
+
+                    <td class="DescriptionCell">&#160;</td>
+
+                    <td align="right">1</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="SectionHeading" id="sourceSectionHeading">
+            <span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">Procedure Source Code</span>
+        </div>
+
+        <div id="sourceSectionContent" class="SectionContent">
+            <table class="sqlsource" border="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <pre>
+<code><span style="color: #008080;">-- =============================================
+-- Author:        &lt;Author,,Name&gt;
+-- Create date: &lt;Create Date,,&gt;
+-- Description:    &lt;Description,,&gt;
+-- =============================================
+</span><span style="color: #0000FF;">CREATE</span>&#160;<span style="color: #0000FF;">PROCEDURE</span>&#160;<span style="color: #FF0000;">[dbo]</span>.<span style="color: #FF0000;">[spInstrumentDate]</span>
+&#160;
+<span style="color: #008000;">@ValuationDate</span>&#160;<span style="color: #0000FF;">datetime</span><br /><span style="color: #0000FF;">AS</span>
+&#160;
+<span style="color: #0000FF;">BEGIN</span>
+&#160;
+<span style="color: #0000FF;">SET</span> NOCOUNT <span style="color: #0000FF;">ON</span>;
+
+
+    <span style="color: #0000FF;">SELECT</span>&#160;<span style="color: #0000FF;">DISTINCT</span> InstrumentID <span style="color: #0000FF;">INTO</span> #IDs  <span style="color: #0000FF;">FROM</span> tblInstrument
+
+
+    <span style="color: #0000FF;">SELECT</span> InstrumentID, <span style="color: #FF00FF;">MAX</span> (InstrumentDate) <span style="color: #0000FF;">AS</span> InstrumentDate 
+        <span style="color: #0000FF;">INTO</span> #Before 
+        <span style="color: #0000FF;">FROM</span> tblInstrument
+        <span style="color: #0000FF;">WHERE</span> InstrumentDate <span style="color: #808080;">&lt;=</span>&#160;<span style="color: #008000;">@ValuationDate</span>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #0000FF;">GROUP</span>&#160;<span style="color: #0000FF;">BY</span> InstrumentID
+
+    <span style="color: #0000FF;">SELECT</span> InstrumentID, <span style="color: #FF00FF;">MIN</span> (InstrumentDate) <span style="color: #0000FF;">AS</span> InstrumentDate  
+        <span style="color: #0000FF;">INTO</span> #After 
+        <span style="color: #0000FF;">FROM</span> tblInstrument
+        <span style="color: #0000FF;">WHERE</span> InstrumentDate <span style="color: #808080;">&gt;</span>&#160;<span style="color: #008000;">@ValuationDate</span>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #0000FF;">GROUP</span>&#160;<span style="color: #0000FF;">BY</span> InstrumentID
+
+        <span style="color: #0000FF;">DELETE</span>&#160;<span style="color: #0000FF;">FROM</span> #IDs <span style="color: #0000FF;">WHERE</span> InstrumentID <span style="color: #808080;">IN</span> (<span style="color: #0000FF;">SELECT</span> InstrumentID <span style="color: #0000FF;">FROM</span> #Before)
+
+    <span style="color: #0000FF;">SELECT</span> #IDs.InstrumentID, InstrumentDate <span style="color: #0000FF;">INTO</span> #Final 
+        <span style="color: #0000FF;">FROM</span> #After <span style="color: #0000FF;">INNER</span>&#160;<span style="color: #808080;">JOIN</span> #IDs <span style="color: #0000FF;">ON</span> #After.InstrumentID <span style="color: #808080;">=</span> #IDs.InstrumentID
+
+    <span style="color: #0000FF;">UNION</span>
+&#160;
+<span style="color: #0000FF;">SELECT</span> #Before.InstrumentID, #Before.InstrumentDate <span style="color: #0000FF;">FROM</span> #Before
+
+    <span style="color: #0000FF;">SELECT</span>    ID, I.InstrumentID, I.InstrumentDate, ISIN, Ticker, Sedol1, Exchange, InstrumentName, InstrumentType, 
+            PriceMid, PriceBid, PriceAsk, PriceLast, PriceNAV, PriceCurrencyID, PriceFactor, DivGross, DivCurrencyID, 
+            DivFactor, FixedParAmount, FixedParValue, FixedCoupon, FixedAccuredInterest
+        <span style="color: #0000FF;">FROM</span> tblInstrument I 
+            <span style="color: #0000FF;">INNER</span>&#160;<span style="color: #808080;">JOIN</span> #Final F <span style="color: #0000FF;">ON</span> I.InstrumentID <span style="color: #808080;">=</span> F.InstrumentID <span style="color: #808080;">AND</span> I.InstrumentDate <span style="color: #808080;">=</span> F.InstrumentDate
+
+    <span style="color: #0000FF;">SELECT</span>        ID, CurrencyID, SymbolLarge, SymbolSmall
+<span style="color: #0000FF;">FROM</span>            tblCurrencySymbol
+
+
+
+    <span style="color: #0000FF;">DROP</span>&#160;<span style="color: #0000FF;">TABLE</span> #IDs, #Before, #After, #Final
+<span style="color: #0000FF;">END</span>
+</code>
+</pre>
+                    </td>
+                </tr>
+            </table>
+        </div><a name="seealsobookmark"></a>
+
+        <div class="SectionHeading" id="seealsoSectionHeading">
+            <span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">See Also</span>
+        </div>
+
+        <div id="seealsoSectionContent" class="SectionContent">
+            <h4 class="dxh4">Related Objects</h4>
+
+            <p><a href="ms-xhelp:///?id=Portfolio DBO_db~s-dbo">dbo Schema</a><br />
+            <a href="ms-xhelp:///?id=Portfolio DBO_db">Portfolio DBO Database</a></p>
+        </div>
+    </div>
+
+    <div id="FooterContent">
+        <p>&#160;</p>
+
+        <p>&#160;</p>
+        <hr style="height: 1px" />
+
+        <p>© 2016 All Rights Reserved.</p><a href="mailto:support@company.com?subject=Documentation Feedback: Portfolio DBO_db~s-dbo~p-spInstrumentDate.html">Send comments</a> on this topic.
+    </div>
+</body>
+</html>
