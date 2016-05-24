@@ -72,7 +72,7 @@
             this.navibar1.Location = new System.Drawing.Point(12, 12);
             this.navibar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.navibar1.Name = "navibar1";
-            this.navibar1.Size = new System.Drawing.Size(277, 109);
+            this.navibar1.Size = new System.Drawing.Size(277, 152);
             this.navibar1.TabIndex = 22;
             // 
             // Main

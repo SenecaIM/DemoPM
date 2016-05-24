@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.optionsgroupBox = new System.Windows.Forms.GroupBox();
+            this.btnTransaction = new System.Windows.Forms.Button();
             this.btnInstruments = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
             this.optionsgroupBox.SuspendLayout();
@@ -36,15 +37,27 @@
             // 
             // optionsgroupBox
             // 
+            this.optionsgroupBox.Controls.Add(this.btnTransaction);
             this.optionsgroupBox.Controls.Add(this.btnInstruments);
             this.optionsgroupBox.Controls.Add(this.btnClients);
             this.optionsgroupBox.Location = new System.Drawing.Point(4, 3);
             this.optionsgroupBox.Name = "optionsgroupBox";
-            this.optionsgroupBox.Size = new System.Drawing.Size(200, 80);
+            this.optionsgroupBox.Size = new System.Drawing.Size(200, 119);
             this.optionsgroupBox.TabIndex = 8;
             this.optionsgroupBox.TabStop = false;
             this.optionsgroupBox.Text = "Portfolio Options";
             this.optionsgroupBox.Enter += new System.EventHandler(this.optionsgroupBox_Enter);
+            // 
+            // btnTransaction
+            // 
+            this.btnTransaction.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTransaction.Location = new System.Drawing.Point(17, 79);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Size = new System.Drawing.Size(126, 23);
+            this.btnTransaction.TabIndex = 2;
+            this.btnTransaction.Text = "Show Transactions";
+            this.btnTransaction.UseVisualStyleBackColor = false;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click_1);
             // 
             // btnInstruments
             // 
@@ -74,7 +87,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.optionsgroupBox);
             this.Name = "Navibar";
-            this.Size = new System.Drawing.Size(207, 87);
+            this.Size = new System.Drawing.Size(207, 125);
             this.optionsgroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -85,5 +98,6 @@
         private System.Windows.Forms.GroupBox optionsgroupBox;
         private System.Windows.Forms.Button btnInstruments;
         private System.Windows.Forms.Button btnClients;
+        private System.Windows.Forms.Button btnTransaction;
     }
 }

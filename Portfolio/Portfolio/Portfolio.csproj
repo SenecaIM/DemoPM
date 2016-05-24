@@ -93,6 +93,20 @@
     <Compile Include="PropertyForm.Designer.cs">
       <DependentUpon>PropertyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction.cs" />
+    <Compile Include="TransactionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionAdd.Designer.cs">
+      <DependentUpon>TransactionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionCollection.cs" />
+    <Compile Include="TransactionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionControl.Designer.cs">
+      <DependentUpon>TransactionControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UniversalProductCode.cs" />
     <Compile Include="Database Connection.cs" />
     <Compile Include="InstrumentControl.cs">
@@ -132,6 +146,12 @@
     </Compile>
     <EmbeddedResource Include="PropertyForm.resx">
       <DependentUpon>PropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionAdd.resx">
+      <DependentUpon>TransactionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionControl.resx">
+      <DependentUpon>TransactionControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="documentation\documentation.dxp" />
     <None Include="Properties\Settings.settings">

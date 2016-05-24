@@ -32,6 +32,10 @@ namespace Portfolio
                 {                     
                     this.Controls.Remove(ctrl);
                 }
+                else if (ctrl.GetType() == typeof(TransactionControl))
+                {
+                    this.Controls.Remove(ctrl);
+                }
             }
 
         }
@@ -59,11 +63,23 @@ namespace Portfolio
             cl1.ShowObject += new EventHandler(cl1_ShowObject);
 
         }
+
+        private void AddTransactions()
+        {
+            TransactionControl tc = new TransactionControl();
+            LayoutControl(tc);
+            tc.ShowObject += new EventHandler(tc_ShowObject);
+        }
        
         private void cl1_ShowObject(object sender, EventArgs e)
         {
             Client cll = sender as Client;
             prop1.SetObject(cll);
+        }
+        private void tc_ShowObject(object sender, EventArgs e)
+        {
+            Transaction tc = sender as Transaction;
+            prop1.SetObject(tc);
         }
 
         private void con1_ShowObj(object sender, EventArgs e)
@@ -84,6 +100,7 @@ namespace Portfolio
             navibar1.showClients += new EventHandler(navibar1_showClients);
             navibar1.showInstruments += new EventHandler(navibar1_showInstruments);
             navibar1.showPortfolio += new EventHandler(navibar1_showPortfolio);
+            navibar1.showTransactions += new EventHandler(navibar1_showTransactions);
 
 
         }
@@ -101,6 +118,10 @@ namespace Portfolio
         private void navibar1_showClients(object sender, EventArgs e)
         {
             AddClients();
+        }
+        private void navibar1_showTransactions(object sender, EventArgs e)
+        {
+            AddTransactions();
         }
 
         private void clientsControl1_Load(object sender, EventArgs e)

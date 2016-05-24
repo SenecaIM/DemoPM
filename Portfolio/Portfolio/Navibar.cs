@@ -16,6 +16,7 @@ namespace Portfolio
         public event EventHandler showInstruments;
         public event EventHandler showPortfolio;
         public event EventHandler showClients;
+        public event EventHandler showTransactions;
         public Navibar()
         {
             InitializeComponent();
@@ -35,6 +36,12 @@ namespace Portfolio
         {
             showInstruments(sender, e);
         }
+
+
+        private void btnTransaction_Click_1(object sender, EventArgs e)
+        {
+            showTransactions(sender, e);
         }
+    }
     }
 
