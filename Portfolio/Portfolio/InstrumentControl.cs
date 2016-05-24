@@ -28,6 +28,7 @@ namespace Portfolio
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             inst.Fill(DateTime.Now, "GBP");
             IDColumn.AspectName = "ID";
             InstrumentIDColumn.AspectName = "Identifier.InstrumentID";
@@ -60,9 +61,11 @@ namespace Portfolio
 
         private void portfolioOLV_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
             ObjectListView o = (ObjectListView)sender;
             ShowObject((Instrument)o.SelectedObject, e);
+            portfolioOLV.IsSimpleDragSource = true;
+            
         }
 
         private void fromDatePicker_ValueChanged(object sender, EventArgs e)

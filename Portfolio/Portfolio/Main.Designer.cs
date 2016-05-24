@@ -63,6 +63,7 @@
             this.panel1.Size = new System.Drawing.Size(1139, 483);
             this.panel1.TabIndex = 21;
             this.panel1.Visible = false;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // navibar1
             // 
