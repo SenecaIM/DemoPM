@@ -36,12 +36,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.buyTextBox = new System.Windows.Forms.TextBox();
-            this.sellTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnDetailsShow = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buyOLV = new BrightIdeasSoftware.ObjectListView();
+            this.nameColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.sellOLV = new BrightIdeasSoftware.ObjectListView();
+            this.nameColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            ((System.ComponentModel.ISupportInitialize)(this.buyOLV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellOLV)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox2
@@ -109,23 +113,6 @@
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // buyTextBox
-            // 
-            this.buyTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyTextBox.Location = new System.Drawing.Point(12, 40);
-            this.buyTextBox.Name = "buyTextBox";
-            this.buyTextBox.Size = new System.Drawing.Size(274, 29);
-            this.buyTextBox.TabIndex = 15;
-            this.buyTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // sellTextBox
-            // 
-            this.sellTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellTextBox.Location = new System.Drawing.Point(764, 40);
-            this.sellTextBox.Name = "sellTextBox";
-            this.sellTextBox.Size = new System.Drawing.Size(274, 29);
-            this.sellTextBox.TabIndex = 16;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -176,18 +163,75 @@
             this.panel1.TabIndex = 22;
             this.panel1.Visible = false;
             // 
+            // buyOLV
+            // 
+            this.buyOLV.AllColumns.Add(this.nameColumn);
+            this.buyOLV.AllowDrop = true;
+            this.buyOLV.CellEditUseWholeCell = false;
+            this.buyOLV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.nameColumn});
+            this.buyOLV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buyOLV.HighlightBackgroundColor = System.Drawing.Color.Empty;
+            this.buyOLV.HighlightForegroundColor = System.Drawing.Color.Empty;
+            this.buyOLV.IsSimpleDragSource = true;
+            this.buyOLV.IsSimpleDropSink = true;
+            this.buyOLV.Location = new System.Drawing.Point(26, 30);
+            this.buyOLV.Name = "buyOLV";
+            this.buyOLV.Size = new System.Drawing.Size(236, 81);
+            this.buyOLV.TabIndex = 23;
+            this.buyOLV.UseCompatibleStateImageBehavior = false;
+            this.buyOLV.View = System.Windows.Forms.View.Details;
+            this.buyOLV.Dropped += new System.EventHandler<BrightIdeasSoftware.OlvDropEventArgs>(this.buyOLV_Dropped);
+            this.buyOLV.ModelCanDrop += new System.EventHandler<BrightIdeasSoftware.ModelDropEventArgs>(this.buyOLV_ModelCanDrop);
+            this.buyOLV.ModelDropped += new System.EventHandler<BrightIdeasSoftware.ModelDropEventArgs>(this.buyOLV_ModelDropped);
+            this.buyOLV.SelectedIndexChanged += new System.EventHandler(this.buyOLV_SelectedIndexChanged);
+            // 
+            // nameColumn
+            // 
+            this.nameColumn.Groupable = false;
+            this.nameColumn.HeaderCheckBoxUpdatesRowCheckBoxes = false;
+            this.nameColumn.Text = "Instrument Name";
+            this.nameColumn.Width = 213;
+            // 
+            // sellOLV
+            // 
+            this.sellOLV.AllColumns.Add(this.nameColumn2);
+            this.sellOLV.AllowDrop = true;
+            this.sellOLV.CellEditUseWholeCell = false;
+            this.sellOLV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.nameColumn2});
+            this.sellOLV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.sellOLV.HighlightBackgroundColor = System.Drawing.Color.Empty;
+            this.sellOLV.HighlightForegroundColor = System.Drawing.Color.Empty;
+            this.sellOLV.IsSimpleDropSink = true;
+            this.sellOLV.Location = new System.Drawing.Point(781, 30);
+            this.sellOLV.Name = "sellOLV";
+            this.sellOLV.Size = new System.Drawing.Size(236, 81);
+            this.sellOLV.TabIndex = 24;
+            this.sellOLV.UseCompatibleStateImageBehavior = false;
+            this.sellOLV.View = System.Windows.Forms.View.Details;
+            this.sellOLV.ModelCanDrop += new System.EventHandler<BrightIdeasSoftware.ModelDropEventArgs>(this.sellOLV_ModelCanDrop);
+            this.sellOLV.ModelDropped += new System.EventHandler<BrightIdeasSoftware.ModelDropEventArgs>(this.sellOLV_ModelDropped);
+            // 
+            // nameColumn2
+            // 
+            this.nameColumn2.Groupable = false;
+            this.nameColumn2.HeaderCheckBoxUpdatesRowCheckBoxes = false;
+            this.nameColumn2.Text = "Instrument Name";
+            this.nameColumn2.Width = 218;
+            // 
             // TransactionAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1050, 662);
+            this.Controls.Add(this.sellOLV);
+            this.Controls.Add(this.buyOLV);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDetailsShow);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.sellTextBox);
-            this.Controls.Add(this.buyTextBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -198,6 +242,8 @@
             this.Name = "TransactionAdd";
             this.Text = "Log in a transaction";
             this.Load += new System.EventHandler(this.TransactionAdd_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.buyOLV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sellOLV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,11 +257,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox buyTextBox;
-        private System.Windows.Forms.TextBox sellTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnDetailsShow;
         private System.Windows.Forms.Panel panel1;
+        private BrightIdeasSoftware.ObjectListView buyOLV;
+        private BrightIdeasSoftware.ObjectListView sellOLV;
+        private BrightIdeasSoftware.OLVColumn nameColumn;
+        private BrightIdeasSoftware.OLVColumn nameColumn2;
     }
 }

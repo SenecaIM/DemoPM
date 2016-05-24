@@ -65,6 +65,10 @@ namespace Portfolio
             ObjectListView o = (ObjectListView)sender;
             ShowObject((Instrument)o.SelectedObject, e);
             portfolioOLV.IsSimpleDragSource = true;
+            portfolioOLV.AllowDrop = true;
+            portfolioOLV.IsSimpleDropSink = true;
+            
+            
             
         }
 

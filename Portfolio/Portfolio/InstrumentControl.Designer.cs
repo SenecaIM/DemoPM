@@ -54,6 +54,7 @@
             this.portfolioOLV.AllColumns.Add(this.InstrumentNameColumn);
             this.portfolioOLV.AllColumns.Add(this.PriceDisplayColumn);
             this.portfolioOLV.AllColumns.Add(this.DetailColumn);
+            this.portfolioOLV.AllowDrop = true;
             this.portfolioOLV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -73,10 +74,12 @@
             this.portfolioOLV.FullRowSelect = true;
             this.portfolioOLV.HighlightBackgroundColor = System.Drawing.Color.Empty;
             this.portfolioOLV.HighlightForegroundColor = System.Drawing.Color.Empty;
+            this.portfolioOLV.IsSimpleDragSource = true;
+            this.portfolioOLV.IsSimpleDropSink = true;
             this.portfolioOLV.Location = new System.Drawing.Point(0, 49);
             this.portfolioOLV.Name = "portfolioOLV";
             this.portfolioOLV.ShowGroups = false;
-            this.portfolioOLV.Size = new System.Drawing.Size(1170, 468);
+            this.portfolioOLV.Size = new System.Drawing.Size(917, 468);
             this.portfolioOLV.TabIndex = 1;
             this.portfolioOLV.UseCompatibleStateImageBehavior = false;
             this.portfolioOLV.View = System.Windows.Forms.View.Details;
