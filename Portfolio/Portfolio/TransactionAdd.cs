@@ -32,16 +32,6 @@ namespace Portfolio
             //MessageBox.Show(comboBox1.SelectedValue.ToString());
         }
 
-        private void instrumentControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void TransactionAdd_Load(object sender, EventArgs e)
         {
             AddInstruments();
@@ -90,14 +80,6 @@ namespace Portfolio
         {
             get; set;
         }
-
-        private void buyOLV_DragEnter(object sender, DragEventArgs e)
-        {
-
-        }
-
-
-
         private void buyOLV_Dropped(object sender, BrightIdeasSoftware.OlvDropEventArgs e)
         {
             if (e.DropTargetItem == null)
@@ -108,12 +90,6 @@ namespace Portfolio
 
             }
         }
-
-        private void buyOLV_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void buyOLV_ModelCanDrop(object sender, BrightIdeasSoftware.ModelDropEventArgs e)
         {

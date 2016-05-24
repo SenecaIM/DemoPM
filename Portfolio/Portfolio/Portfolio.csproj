@@ -107,6 +107,7 @@
     <Compile Include="TransactionControl.Designer.cs">
       <DependentUpon>TransactionControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransactionLog.cs" />
     <Compile Include="UniversalProductCode.cs" />
     <Compile Include="Database Connection.cs" />
     <Compile Include="InstrumentControl.cs">

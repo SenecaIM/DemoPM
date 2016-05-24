@@ -184,7 +184,6 @@
             this.buyOLV.Dropped += new System.EventHandler<BrightIdeasSoftware.OlvDropEventArgs>(this.buyOLV_Dropped);
             this.buyOLV.ModelCanDrop += new System.EventHandler<BrightIdeasSoftware.ModelDropEventArgs>(this.buyOLV_ModelCanDrop);
             this.buyOLV.ModelDropped += new System.EventHandler<BrightIdeasSoftware.ModelDropEventArgs>(this.buyOLV_ModelDropped);
-            this.buyOLV.SelectedIndexChanged += new System.EventHandler(this.buyOLV_SelectedIndexChanged);
             // 
             // nameColumn
             // 
