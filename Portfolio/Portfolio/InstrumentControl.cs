@@ -82,5 +82,16 @@ namespace Portfolio
             inst.Fill(fromDatePicker.Value, currencyID);
             portfolioOLV.SetObjects(inst.InstrumentItems);
         }
+
+        private void portfolioOLV_FormatRow(object sender, FormatRowEventArgs e)
+        {
+            Instrument ins = e.Model as Instrument;
+            if (ins.InstrumentType.ToUpper() == "CURNCY".ToUpper())
+            {
+                e.Item.ForeColor = Color.Purple;
+            }
+
+        }
+
     }
 }

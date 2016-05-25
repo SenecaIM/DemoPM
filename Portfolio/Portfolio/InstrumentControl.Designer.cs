@@ -83,6 +83,7 @@
             this.portfolioOLV.TabIndex = 1;
             this.portfolioOLV.UseCompatibleStateImageBehavior = false;
             this.portfolioOLV.View = System.Windows.Forms.View.Details;
+            this.portfolioOLV.FormatRow += new System.EventHandler<BrightIdeasSoftware.FormatRowEventArgs>(this.portfolioOLV_FormatRow);
             this.portfolioOLV.SelectedIndexChanged += new System.EventHandler(this.portfolioOLV_SelectedIndexChanged);
             // 
             // IDColumn

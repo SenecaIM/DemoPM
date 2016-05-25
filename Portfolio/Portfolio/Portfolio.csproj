@@ -51,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+    <Compile Include="ClientAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientAdd.Designer.cs">
+      <DependentUpon>ClientAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientCollection.cs" />
     <Compile Include="ClientsControl.cs">
       <SubType>UserControl</SubType>
@@ -119,6 +125,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClientAdd.resx">
+      <DependentUpon>ClientAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientsControl.resx">
       <DependentUpon>ClientsControl.cs</DependentUpon>
     </EmbeddedResource>

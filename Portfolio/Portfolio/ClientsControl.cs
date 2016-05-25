@@ -68,6 +68,11 @@ namespace Portfolio
             PortfolioForm pr = new PortfolioForm();
             pr.Show();
         }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
 
