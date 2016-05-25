@@ -71,7 +71,9 @@ namespace Portfolio
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            
+            ClientAdd ad = new ClientAdd();
+            ad.Show();
+
         }
     }
 }

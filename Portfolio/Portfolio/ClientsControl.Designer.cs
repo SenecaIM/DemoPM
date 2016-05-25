@@ -115,7 +115,7 @@
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(109, 62);
             this.btnAddClient.TabIndex = 17;
-            this.btnAddClient.Text = "Add a new client";
+            this.btnAddClient.Text = "Add or edit a client";
             this.btnAddClient.UseVisualStyleBackColor = false;
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 

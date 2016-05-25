@@ -58,6 +58,7 @@
       <DependentUpon>ClientAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="ClientCollection.cs" />
+    <Compile Include="ClientEdit.cs" />
     <Compile Include="ClientsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
