@@ -59,6 +59,7 @@
       <DependentUpon>ClientsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="CurrencySymbol.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="FX.cs" />
     <Compile Include="Identifier.cs" />
     <Compile Include="Instrument.cs" />

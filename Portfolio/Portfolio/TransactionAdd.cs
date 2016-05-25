@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -127,6 +130,38 @@ namespace Portfolio
             Instrument i = e.DataObject as Instrument;
             e.Effect = DragDropEffects.Link;
         }
+
+        private bool CheckDbConnection(string connectionString)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    return true;
+                }
+            }
+            catch (SqlException)
+            {
+                
+                return false; 
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int buyid = ((Instrument)((IList)buyOLV.Objects)[0]).Identifier.InstrumentID;
+            int sellid = ((Instrument)((IList)sellOLV.Objects)[0]).Identifier.InstrumentID;
+            TransactionLog.LogInTransaction(buytextBox.ToDecimal(), sellTextBox.ToDecimal(), buyid, sellid, bookTextBox.ToDecimal(), dateTimePicker1.Value.Date);
+            
+            buytextBox.Text = "";
+            sellTextBox.Text = "";
+            bookTextBox.Text = "";
+            buyOLV.ClearObjects();
+            sellOLV.ClearObjects();
+
+        }
     }
 }
+    
 
