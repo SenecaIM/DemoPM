@@ -13,12 +13,13 @@ namespace Portfolio
 {
     public partial class ClientAdd : Form
     {
-        public Client cll;
+        public Client cl1;
         ClientCollection cc = new ClientCollection();
+        public DateTime dtt = new DateTime();
         
         public List<Client> client = new List<Client>();
         
-        internal void EditClient(Client cl)
+        public void EditClient(Client cl)
         {
             nameTextBox.Text = cl.ClientName;
             currencyTextBox.Text = cl.CurrencyID;
@@ -27,8 +28,8 @@ namespace Portfolio
             clienttypeTextBox.Text = cl.ClientType;
             companyTextBox.Text = cl.Company;
             telephoneTextBox.Text = cl.TelephoneNumber;
-            cll = cl;
-            this.ShowDialog();
+            cl1 = cl1;
+            //this.ShowDialog();
         }
         public ClientAdd()
         {
@@ -45,7 +46,9 @@ namespace Portfolio
 
         private void ClientAdd_Load(object sender, EventArgs e)
         {
-            clienteditOLV.SetObjects(client);
+            cc.Fill(dtt);
+            
+            clienteditOLV.SetObjects(cc.ClientItems);
         }
         public void RefreshList()
         {
@@ -59,14 +62,20 @@ namespace Portfolio
             {
                 if (o.SelectedItem.RowObject is Client)
                 {
-                    Client cli = o.SelectedItem.RowObject as Client;
-                    EditClient(cli);
+                    Client cl = o.SelectedItem.RowObject as Client;
+                    EditClient(cl);
                 }
             }
-            else
-            {
-                throw new NotSupportedException();
-            }
+        }
+
+        private void clienteditOLV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

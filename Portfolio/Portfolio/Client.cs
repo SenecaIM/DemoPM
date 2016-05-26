@@ -11,6 +11,8 @@ namespace Portfolio
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class Client
     {
+        
+
         public Client(DataRow dr)
         {
             ID = Convert.ToInt32(dr["ID"]);
@@ -22,7 +24,9 @@ namespace Portfolio
             Company = dr["Company"].ToString();
             TelephoneNumber = dr["TelephoneNumber"].ToString();
         }
-        
+
+
+
         [Browsable(true)]
         [ReadOnly(true)]
         [Description("Client's name")]
