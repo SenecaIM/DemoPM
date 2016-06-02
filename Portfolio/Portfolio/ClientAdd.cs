@@ -14,6 +14,7 @@ namespace Portfolio
     public partial class ClientAdd : Form
     {
         Client cl;
+        Client cl2;
         //public Client cl1;
         ClientCollection cc = new ClientCollection();
         public DateTime dtt = new DateTime();
@@ -78,6 +79,7 @@ namespace Portfolio
             Add();
 
         }
+        
 
         public void btnClear_Click(object sender, EventArgs e)
         {

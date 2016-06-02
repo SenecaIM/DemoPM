@@ -13,6 +13,19 @@ namespace Portfolio
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class Client
     {
+        public void Delete()
+        {
+            DataTable ds = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter();
+            using (SqlCommand cmd = Database.CommandFactory("spClientDelete"))
+            {
+
+                cmd.Parameters.Add(new SqlParameter(@"ID", ID));
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+            }
+        }
+
         public void UpdateClient()
         {
             DataTable dt = new DataTable();

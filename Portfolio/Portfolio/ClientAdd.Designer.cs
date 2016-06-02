@@ -52,6 +52,8 @@
             this.ClientNameColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.CompanyColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.clienteditOLV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,7 +224,7 @@
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(109, 62);
             this.btnSubmit.TabIndex = 19;
-            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Text = "Edit Client";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
@@ -262,13 +264,39 @@
             this.btnClear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(314, 606);
+            this.btnClear.Location = new System.Drawing.Point(51, 606);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(109, 62);
             this.btnClear.TabIndex = 21;
             this.btnClear.Text = "Clear the cells";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(184, 606);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(109, 62);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "Delete selected client";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNew.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(314, 606);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(109, 62);
+            this.btnNew.TabIndex = 23;
+            this.btnNew.Text = "Create new client";
+            this.btnNew.UseVisualStyleBackColor = false;
             // 
             // ClientAdd
             // 
@@ -277,6 +305,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(563, 680);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.clienteditOLV);
             this.Controls.Add(this.btnSubmit);
@@ -332,5 +362,7 @@
         private BrightIdeasSoftware.OLVColumn ClientNameColumn;
         private BrightIdeasSoftware.OLVColumn CompanyColumn;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnNew;
     }
 }

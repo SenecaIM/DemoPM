@@ -13,11 +13,13 @@ namespace Portfolio
     {
         public List<Client> Client = new List<Client>();
         public List<Client> Clients { get { return Client; } set { Client = value; } }
+        
+
         public void ContactBook()
         {
             SqlDataAdapter da = new SqlDataAdapter();
             DataSet ds = new DataSet();
-            SqlCommand cmd = Database.CommandFactory("spClientEdit");
+            SqlCommand cmd = Database.CommandFactory("spClientAdd");
             da.SelectCommand = cmd;
             da.Fill(ds);
             DataTable dtClient = ds.Tables[0];
@@ -34,7 +36,7 @@ namespace Portfolio
             DataTable dt = new DataTable();
 
 
-            SqlCommand cmd = Database.CommandFactory("spMotorbikeAdd");
+            SqlCommand cmd = Database.CommandFactory("spClientAdd");
 
 
 
