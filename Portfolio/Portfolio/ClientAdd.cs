@@ -13,13 +13,14 @@ namespace Portfolio
 {
     public partial class ClientAdd : Form
     {
-        public Client cl1;
+        Client cl;
+        //public Client cl1;
         ClientCollection cc = new ClientCollection();
         public DateTime dtt = new DateTime();
         
         public List<Client> client = new List<Client>();
         
-        public void EditClient(Client cl)
+        public void EditClient()
         {
             nameTextBox.Text = cl.ClientName;
             currencyTextBox.Text = cl.CurrencyID;
@@ -28,8 +29,7 @@ namespace Portfolio
             clienttypeTextBox.Text = cl.ClientType;
             companyTextBox.Text = cl.Company;
             telephoneTextBox.Text = cl.TelephoneNumber;
-            cl1 = cl1;
-            //this.ShowDialog();
+            idTextBox.Text = cl.ID.ToString();
         }
         public ClientAdd()
         {
@@ -37,22 +37,10 @@ namespace Portfolio
             ClientNameColumn.AspectName = "ClientName";
             CompanyColumn.AspectName = "Company";
         }
-
-        public void UpdateClient()
-        {
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter();
-        }
-
         private void ClientAdd_Load(object sender, EventArgs e)
         {
             cc.Fill(dtt);
-            
             clienteditOLV.SetObjects(cc.ClientItems);
-        }
-        public void RefreshList()
-        {
-           
         }
 
         private void clienteditOLV_SelectionChanged(object sender, EventArgs e)
@@ -62,20 +50,47 @@ namespace Portfolio
             {
                 if (o.SelectedItem.RowObject is Client)
                 {
-                    Client cl = o.SelectedItem.RowObject as Client;
-                    EditClient(cl);
+                    cl = o.SelectedItem.RowObject as Client;
+                    EditClient();
                 }
             }
+            idTextBox.Enabled = false;
+        }
+        public void btnSubmit_Click(object sender, EventArgs e)
+        {
+            cl.ClientName = nameTextBox.Text;
+            cl.CurrencyID = currencyTextBox.Text;
+            cl.Address = addressTextBox.Text;
+            cl.Capital = capitalTextBox.Text;
+            cl.ClientType = clienttypeTextBox.Text;
+            cl.Company = companyTextBox.Text;
+            cl.TelephoneNumber = telephoneTextBox.Text;
+            cl.UpdateClient();
+            Clear();
+
         }
 
-        private void clienteditOLV_SelectedIndexChanged(object sender, EventArgs e)
+        public void btnClear_Click(object sender, EventArgs e)
         {
-
+            Clear();
+            MessageBox.Show("Cells Cleared");
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        public void Clear()
         {
-            
+            idTextBox.Clear();
+            nameTextBox.Clear();
+            currencyTextBox.Clear();
+            addressTextBox.Clear();
+            capitalTextBox.Clear();
+            clienttypeTextBox.Clear();
+            companyTextBox.Clear();
+            telephoneTextBox.Clear();
+        }
+
+        public void Register()
+        {
+
         }
     }
 }

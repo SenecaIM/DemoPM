@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientAdd));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             this.clienteditOLV = new BrightIdeasSoftware.ObjectListView();
             this.ClientNameColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.CompanyColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.clienteditOLV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,7 +207,6 @@
             // idTextBox
             // 
             this.idTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.idTextBox.Enabled = false;
             this.idTextBox.Location = new System.Drawing.Point(161, 299);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(47, 20);
@@ -242,9 +243,8 @@
             this.clienteditOLV.Size = new System.Drawing.Size(433, 202);
             this.clienteditOLV.TabIndex = 20;
             this.clienteditOLV.UseCompatibleStateImageBehavior = false;
-            this.clienteditOLV.View = System.Windows.Forms.View.Details;
+            this.clienteditOLV.View = System.Windows.Forms.View.List;
             this.clienteditOLV.SelectionChanged += new System.EventHandler(this.clienteditOLV_SelectionChanged);
-            this.clienteditOLV.SelectedIndexChanged += new System.EventHandler(this.clienteditOLV_SelectedIndexChanged);
             // 
             // ClientNameColumn
             // 
@@ -256,12 +256,28 @@
             this.CompanyColumn.Text = "Company";
             this.CompanyColumn.Width = 187;
             // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(314, 606);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(109, 62);
+            this.btnClear.TabIndex = 21;
+            this.btnClear.Text = "Clear the cells";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // ClientAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(563, 680);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.clienteditOLV);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.idTextBox);
@@ -315,5 +331,6 @@
         private BrightIdeasSoftware.ObjectListView clienteditOLV;
         private BrightIdeasSoftware.OLVColumn ClientNameColumn;
         private BrightIdeasSoftware.OLVColumn CompanyColumn;
+        private System.Windows.Forms.Button btnClear;
     }
 }
