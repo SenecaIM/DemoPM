@@ -19,7 +19,15 @@ namespace Portfolio
         public DateTime dtt = new DateTime();
         
         public List<Client> client = new List<Client>();
-        
+
+
+        internal Client Add()
+        {
+
+            Client monroe = ClientEdit.New(Convert.ToInt32(idTextBox.Text), nameTextBox.Text, currencyTextBox.Text, addressTextBox.Text, capitalTextBox.Text, clienttypeTextBox.Text, companyTextBox.Text, telephoneTextBox.Text);
+            return monroe;
+        }
+
         public void EditClient()
         {
             nameTextBox.Text = cl.ClientName;
@@ -67,6 +75,7 @@ namespace Portfolio
             cl.TelephoneNumber = telephoneTextBox.Text;
             cl.UpdateClient();
             Clear();
+            Add();
 
         }
 

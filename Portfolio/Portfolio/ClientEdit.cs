@@ -28,7 +28,37 @@ namespace Portfolio
             }
         }
 
+        public static Client New(int ID, string ClientName, string CurrencyID, string Address, string Capital, string ClientType, string Company, string TelephoneNumber)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
 
+
+            SqlCommand cmd = Database.CommandFactory("spMotorbikeAdd");
+
+
+
+            cmd.Parameters.Add(new SqlParameter(@"ID", ID));
+            cmd.Parameters.Add(new SqlParameter(@"ClientName", ClientName));
+            cmd.Parameters.Add(new SqlParameter(@"CurrencyID", CurrencyID));
+            cmd.Parameters.Add(new SqlParameter(@"Address", Address));
+            cmd.Parameters.Add(new SqlParameter(@"Capital", Capital));
+            cmd.Parameters.Add(new SqlParameter(@"ClientType", ClientType));
+            cmd.Parameters.Add(new SqlParameter(@"Company", Company));
+            cmd.Parameters.Add(new SqlParameter(@"TelephoneNumber", TelephoneNumber));
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+
+            DataRow dr = dt.Rows[0];
+            Client monroe = new Client(dr);
+                
+                
+                //(Convert.ToInt32(dr["ID"]), dr["ClientName"].ToString(), dr["CurrencyID"].ToString(), dr["Address"].ToString(), dr["Capital"].ToString(), dr["ClientType"].ToString(), dr["Company"].ToString(), dr["TelephoneNumber"]);
+
+
+            return monroe;
+
+        }
 
 
     }
