@@ -24,9 +24,9 @@ namespace Portfolio
 
         internal Client Add()
         {
-
             Client monroe = ClientEdit.New(Convert.ToInt32(idTextBox.Text), nameTextBox.Text, currencyTextBox.Text, addressTextBox.Text, capitalTextBox.Text, clienttypeTextBox.Text, companyTextBox.Text, telephoneTextBox.Text);
             return monroe;
+
         }
 
         public void EditClient()
@@ -76,7 +76,7 @@ namespace Portfolio
             cl.TelephoneNumber = telephoneTextBox.Text;
             cl.UpdateClient();
             Clear();
-            Add();
+            
 
         }
         
@@ -102,6 +102,27 @@ namespace Portfolio
         public void Register()
         {
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("You are about to delete a Client, Are you sure?", "Warning", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                cl.Delete();
+                MessageBox.Show("Client succesfully deleted");
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                this.Hide();
+            }
+            
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            cl.Create();
+            Clear();
         }
     }
 }

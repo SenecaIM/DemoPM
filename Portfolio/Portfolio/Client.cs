@@ -47,6 +47,29 @@ namespace Portfolio
             MessageBox.Show("Operation Completed, Client updated");
             
         }
+
+        public void Create()
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter();
+
+            using (SqlCommand cmd = Database.CommandFactory("spClientAdd"))
+            {
+                cmd.Parameters.Add(new SqlParameter(@"ID", ID));
+                cmd.Parameters.Add(new SqlParameter(@"ClientName", ClientName));
+                cmd.Parameters.Add(new SqlParameter(@"CurrencyID", CurrencyID));
+                cmd.Parameters.Add(new SqlParameter(@"Address", Address));
+                cmd.Parameters.Add(new SqlParameter(@"Capital", Capital));
+                cmd.Parameters.Add(new SqlParameter(@"ClientType", ClientType));
+                cmd.Parameters.Add(new SqlParameter(@"Company", Company));
+                cmd.Parameters.Add(new SqlParameter(@"TelephoneNumber", TelephoneNumber));
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                
+            }
+            MessageBox.Show("Operation Completed, Client Added");
+            
+        }
         public Client(DataRow dr)
         {
             ID = Convert.ToInt32(dr["ID"]);

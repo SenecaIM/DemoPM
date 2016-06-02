@@ -284,6 +284,7 @@
             this.btnDelete.TabIndex = 22;
             this.btnDelete.Text = "Delete selected client";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnNew
             // 
@@ -297,6 +298,7 @@
             this.btnNew.TabIndex = 23;
             this.btnNew.Text = "Create new client";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // ClientAdd
             // 
