@@ -67,6 +67,12 @@
     </Compile>
     <Compile Include="CurrencySymbol.cs" />
     <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
     <Compile Include="FX.cs" />
     <Compile Include="Identifier.cs" />
     <Compile Include="Instrument.cs" />
@@ -132,6 +138,9 @@
     <EmbeddedResource Include="ClientsControl.resx">
       <DependentUpon>ClientsControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InstrumentControl.resx">
       <DependentUpon>InstrumentControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +174,7 @@
     <EmbeddedResource Include="TransactionControl.resx">
       <DependentUpon>TransactionControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="documentation\documentation.dxp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

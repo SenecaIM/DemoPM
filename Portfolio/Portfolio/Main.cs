@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cars;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -157,6 +158,12 @@ namespace Portfolio
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Form5 help = new Form5();
+            help.Show();
         }
     }
 }

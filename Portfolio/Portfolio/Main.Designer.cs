@@ -32,6 +32,7 @@
             this.btnDetailsShow = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.navibar1 = new Portfolio.Navibar();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDetailsShow
@@ -76,12 +77,32 @@
             this.navibar1.Size = new System.Drawing.Size(277, 152);
             this.navibar1.TabIndex = 22;
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHelp.BackColor = System.Drawing.Color.DeepPink;
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
+            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHelp.Location = new System.Drawing.Point(990, 77);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(161, 46);
+            this.btnHelp.TabIndex = 23;
+            this.btnHelp.Tag = "false";
+            this.btnHelp.Text = "I need help";
+            this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1163, 674);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.navibar1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDetailsShow);
@@ -96,5 +117,6 @@
         private System.Windows.Forms.Button btnDetailsShow;
         private System.Windows.Forms.Panel panel1;
         private Navibar navibar1;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

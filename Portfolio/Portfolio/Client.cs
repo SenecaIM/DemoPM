@@ -52,7 +52,7 @@ namespace Portfolio
         {
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter();
-
+            
             using (SqlCommand cmd = Database.CommandFactory("spClientAdd"))
             {
                 cmd.Parameters.Add(new SqlParameter(@"ID", ID));
@@ -65,7 +65,11 @@ namespace Portfolio
                 cmd.Parameters.Add(new SqlParameter(@"TelephoneNumber", TelephoneNumber));
                 da.SelectCommand = cmd;
                 da.Fill(dt);
+
+                DataRow dr = dt.Rows[0];
+                Client cl = new Client(dr);
                 
+
             }
             MessageBox.Show("Operation Completed, Client Added");
             

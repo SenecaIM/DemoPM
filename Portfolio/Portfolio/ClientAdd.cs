@@ -63,7 +63,7 @@ namespace Portfolio
                     EditClient();
                 }
             }
-            idTextBox.Enabled = false;
+            
         }
         public void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -121,6 +121,8 @@ namespace Portfolio
 
         private void btnNew_Click(object sender, EventArgs e)
         {
+
+
             cl.Create();
             Clear();
         }
