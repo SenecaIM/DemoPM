@@ -14,19 +14,15 @@ namespace Portfolio
     public partial class ClientAdd : Form
     {
         Client cl;
-        Client cl2;
-        //public Client cl1;
         ClientCollection cc = new ClientCollection();
         public DateTime dtt = new DateTime();
         
         public List<Client> client = new List<Client>();
 
-
         internal Client Add()
         {
             Client monroe = ClientEdit.New(Convert.ToInt32(idTextBox.Text), nameTextBox.Text, currencyTextBox.Text, addressTextBox.Text, capitalTextBox.Text, clienttypeTextBox.Text, companyTextBox.Text, telephoneTextBox.Text);
             return monroe;
-
         }
 
         public void EditClient()
@@ -48,8 +44,7 @@ namespace Portfolio
         }
         private void ClientAdd_Load(object sender, EventArgs e)
         {
-            cc.Fill(dtt);
-            clienteditOLV.SetObjects(cc.ClientItems);
+            Refresh();
         }
 
         private void clienteditOLV_SelectionChanged(object sender, EventArgs e)
@@ -61,9 +56,9 @@ namespace Portfolio
                 {
                     cl = o.SelectedItem.RowObject as Client;
                     EditClient();
+                    idTextBox.Enabled = false;
                 }
             }
-            
         }
         public void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -76,8 +71,6 @@ namespace Portfolio
             cl.TelephoneNumber = telephoneTextBox.Text;
             cl.UpdateClient();
             Clear();
-            
-
         }
         
 
@@ -111,20 +104,34 @@ namespace Portfolio
             {
                 cl.Delete();
                 MessageBox.Show("Client succesfully deleted");
+                Refresh();
+                Clear();
             }
             else if (dialogResult == DialogResult.No)
             {
-                this.Hide();
+                this.Close();
             }
-            
+        }
+
+        
+        public override void Refresh()
+        {
+            cc.Fill(dtt);
+            clienteditOLV.SetObjects(cc.ClientItems);
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-
-
+            cl = new Client();
+            cl.ClientName = nameTextBox.Text;
+            cl.CurrencyID = currencyTextBox.Text;
+            cl.Address = addressTextBox.Text;
+            cl.Capital = capitalTextBox.Text;
+            cl.ClientType = clienttypeTextBox.Text;
+            cl.Company = companyTextBox.Text;
+            cl.TelephoneNumber = telephoneTextBox.Text;
             cl.Create();
-            Clear();
+            Refresh();
         }
     }
 }
