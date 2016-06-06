@@ -18,7 +18,6 @@ namespace Portfolio
             Identifier = new Identifier(dr);
             InstrumentDate = Convert.ToDateTime(dr["InstrumentDate"]);
             Exchange = dr["Exchange"].ToString();
-
             InstrumentType = dr["InstrumentType"].ToString();
             PriceMid = Convert.ToDecimal(dr["PriceMid"]);
             PriceBid = Convert.ToDecimal(dr["PriceBid"]);
@@ -34,13 +33,9 @@ namespace Portfolio
             FixedParValue = Convert.ToDecimal(dr["FixedParValue"]);
             FixedCoupon = Convert.ToDecimal(dr["FixedCoupon"]);
             FixedAccuredInterest = Convert.ToDecimal(dr["FixedAccuredInterest"]);
-            
-
         }
         public string PriceDisplay { get { return this.FXPrice.SymbolReporting.SymbolLarge + this.PriceReporting.ToString("#,##0.00") + this.FXPrice.SymbolReporting.SymbolSmall; } }
-        
-            
-        
+
         [Browsable(true)]
         [ReadOnly(true)]
         [Description("Price to be used in valuation of the Instrument")]
@@ -231,7 +226,5 @@ namespace Portfolio
                 "Local Price " + this.PriceLocal.ToString("#,##0.00") + "(" + this.FXPrice.ISOLocal + ")," + 
                 " Reporting Price " + this.PriceReporting.ToString("#,##0.00") + "(" + this.FXPrice.ISOReporting + ")";
         }
-
-        
     }
 }

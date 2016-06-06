@@ -10,12 +10,6 @@ namespace Portfolio
 {
     public static class TransactionLog
     {
-        //public Transaction(decimal buyquantity, decimal sellquantity, int buyinstrumentid, int sellinstrumentid, decimal bookcost, DateTime transactiondate)/*:base(buyquantity, sellquantity, buyinstrumentid, sellinstrumentid, bookcost, transactiondate)*/
-        //{
-            
-            
-        //}
-
         public static bool LogInTransaction(decimal buyquantity, decimal sellquantity, int buyinstrumentid, int sellinstrumentid, decimal bookcost, DateTime transactiondate)
         {
 
