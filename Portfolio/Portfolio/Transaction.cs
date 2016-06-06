@@ -64,5 +64,6 @@ namespace Portfolio
         [DisplayName("Transaction Date")]
         public DateTime TransactionDate { get; set; }
 
+
     }
 }

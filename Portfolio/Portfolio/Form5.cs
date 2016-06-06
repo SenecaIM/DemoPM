@@ -87,7 +87,8 @@ namespace cars
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            SupportForm sup = new SupportForm();
+            sup.Show();
         }
     }
 }
