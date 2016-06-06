@@ -21,9 +21,7 @@ namespace Portfolio
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             string file = "C:\\Users\\Kacper.Lagowski\\Documents\\5.pdf";
-
-            System.IO.StreamReader objReader;
-            objReader = new System.IO.StreamReader(file);
+            System.Diagnostics.Process.Start(file);
         }
 
         private void button1_Click(object sender, EventArgs e)
