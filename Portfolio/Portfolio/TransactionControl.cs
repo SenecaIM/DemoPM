@@ -13,6 +13,7 @@ namespace Portfolio
 {
     public partial class TransactionControl : UserControl
     {
+        
         public event EventHandler ShowObject;
         TransactionCollection tran = new TransactionCollection();
         public TransactionControl()
@@ -25,18 +26,36 @@ namespace Portfolio
             ObjectListView o = (ObjectListView)sender;
             ShowObject((Transaction)o.SelectedObject, e);
         }
-
+        
         private void TransactionControl_Load(object sender, EventArgs e)
         {
-            
             ID.AspectName = "ID";
             TransactionIDColumn.AspectName = "TransactionID";
-            QuantityColumn.AspectName = "Quantity";
-            BookCostColumn.AspectName = "BookCost";
-            InstrumentIDColumn.AspectName = "Instrument.Identifier.InstrumentID";
-            TransactionDateColumn.AspectName = "TransactionDate";
+            QuantityColumn.AspectGetter += new AspectGetterDelegate(QuantityColumn_AspectGetter);
+            BookCostColumn.AspectGetter += new AspectGetterDelegate(BookCostColumn_AspectGetter);
+            InstrumentColumn.AspectName = "Instrument.Identifier.InstrumentName";
+            TransactionDateColumn.AspectGetter += new AspectGetterDelegate(TransactionDateColumn_AspectGetter);
+            
             transactionOLV.SetObjects(tran.TransactionItems);
             Refresh();
+        }
+
+        private object TransactionDateColumn_AspectGetter(object rowObject)
+        {
+            Transaction transaction = rowObject as Transaction;
+            return transaction.TransactionDate.ToShortDateString();
+        }
+
+        private object BookCostColumn_AspectGetter(object rowObject)
+        {
+            Transaction transaction = rowObject as Transaction;
+            return transaction.BookCost.ToBookCost();
+        }
+
+        private object QuantityColumn_AspectGetter(object rowObject)
+        {
+            Transaction transaction = rowObject as Transaction;
+            return transaction.Quantity.ToQuantity();
         }
 
         private void Refresh(string currencyID)

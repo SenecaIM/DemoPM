@@ -13,5 +13,17 @@ namespace Portfolio
         {
             return Convert.ToDecimal(textbox.Text);
         }
+
+        public static string ToBookCost(this decimal bookCost)
+        {
+            return bookCost.ToString("#,##0.00");
+        }
+
+        public static string ToQuantity(this decimal quantity)
+        {
+            return quantity.ToString("#,##0.00######");
+        }
+
+
     }
 }

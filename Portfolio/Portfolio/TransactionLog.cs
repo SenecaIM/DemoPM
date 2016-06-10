@@ -27,6 +27,7 @@ namespace Portfolio
             cmd.Parameters.Add(new SqlParameter(@"TransactionDate", transactiondate));
             da.SelectCommand = cmd;
 
+
             try
             { 
                 da.Fill(dt);
@@ -36,9 +37,6 @@ namespace Portfolio
             {
                 return false;
             }
-
-            //DataRow dr = dt.Rows[0];
-            //Transaction tr = new Transaction(Convert.ToDecimal(dr["BuyQuantity"]), Convert.ToDecimal(dr["SellQuantity"]), Convert.ToInt32(dr["BuyInstrumentID"]), Convert.ToInt32(dr["SellInstrumentID"]), Convert.ToDecimal(dr["BookCost"]), Convert.ToDateTime(dr["TransactionDate"]));
         }
     }
 }

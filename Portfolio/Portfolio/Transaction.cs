@@ -48,7 +48,7 @@ namespace Portfolio
         [Description("The cost of booking the trade")]
         [Category("Transaction Information")]
         [DisplayName("Book Cost")]
-        public decimal BookCost { get;  set; }
+        public decimal BookCost { get; set; }
 
         [Browsable(true)]
         [ReadOnly(true)]

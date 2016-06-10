@@ -36,6 +36,7 @@ namespace Portfolio
             da.Fill(ds);
             DataTable dtInstrument = ds.Tables[0];
             DataTable dtSymbols = ds.Tables[1];
+
             foreach (DataRow dr in dtInstrument.Rows)
             {
                 Instrument ins = new Instrument(dr);

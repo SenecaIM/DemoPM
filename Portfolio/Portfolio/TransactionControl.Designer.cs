@@ -33,10 +33,10 @@
             this.transactionOLV = new BrightIdeasSoftware.ObjectListView();
             this.ID = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.TransactionIDColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.InstrumentColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.TransactionDateColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.QuantityColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.BookCostColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.InstrumentIDColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.TransactionDateColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.label1 = new System.Windows.Forms.Label();
             this.fromDatePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.transactionOLV)).BeginInit();
@@ -60,10 +60,10 @@
             // 
             this.transactionOLV.AllColumns.Add(this.ID);
             this.transactionOLV.AllColumns.Add(this.TransactionIDColumn);
+            this.transactionOLV.AllColumns.Add(this.InstrumentColumn);
+            this.transactionOLV.AllColumns.Add(this.TransactionDateColumn);
             this.transactionOLV.AllColumns.Add(this.QuantityColumn);
             this.transactionOLV.AllColumns.Add(this.BookCostColumn);
-            this.transactionOLV.AllColumns.Add(this.InstrumentIDColumn);
-            this.transactionOLV.AllColumns.Add(this.TransactionDateColumn);
             this.transactionOLV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -72,10 +72,10 @@
             this.transactionOLV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
             this.TransactionIDColumn,
+            this.InstrumentColumn,
+            this.TransactionDateColumn,
             this.QuantityColumn,
-            this.BookCostColumn,
-            this.InstrumentIDColumn,
-            this.TransactionDateColumn});
+            this.BookCostColumn});
             this.transactionOLV.Cursor = System.Windows.Forms.Cursors.Default;
             this.transactionOLV.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transactionOLV.FullRowSelect = true;
@@ -92,32 +92,43 @@
             // 
             // ID
             // 
+            this.ID.IsVisible = false;
             this.ID.Text = "ID";
+            this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ID.Width = 0;
             // 
             // TransactionIDColumn
             // 
             this.TransactionIDColumn.Text = "Transaction ID";
+            this.TransactionIDColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TransactionIDColumn.Width = 121;
+            // 
+            // InstrumentColumn
+            // 
+            this.InstrumentColumn.DisplayIndex = 4;
+            this.InstrumentColumn.Text = "Instrument ";
+            this.InstrumentColumn.Width = 147;
+            // 
+            // TransactionDateColumn
+            // 
+            this.TransactionDateColumn.DisplayIndex = 5;
+            this.TransactionDateColumn.Text = "Transaction Date";
+            this.TransactionDateColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TransactionDateColumn.Width = 132;
             // 
             // QuantityColumn
             // 
+            this.QuantityColumn.DisplayIndex = 2;
             this.QuantityColumn.Text = "Quantity";
+            this.QuantityColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.QuantityColumn.Width = 88;
             // 
             // BookCostColumn
             // 
+            this.BookCostColumn.DisplayIndex = 3;
             this.BookCostColumn.Text = "Book Cost";
+            this.BookCostColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BookCostColumn.Width = 101;
-            // 
-            // InstrumentIDColumn
-            // 
-            this.InstrumentIDColumn.Text = "Instrument ID";
-            this.InstrumentIDColumn.Width = 94;
-            // 
-            // TransactionDateColumn
-            // 
-            this.TransactionDateColumn.Text = "Transaction Date";
-            this.TransactionDateColumn.Width = 132;
             // 
             // label1
             // 
@@ -164,7 +175,7 @@
         private BrightIdeasSoftware.OLVColumn TransactionIDColumn;
         private BrightIdeasSoftware.OLVColumn QuantityColumn;
         private BrightIdeasSoftware.OLVColumn BookCostColumn;
-        private BrightIdeasSoftware.OLVColumn InstrumentIDColumn;
+        private BrightIdeasSoftware.OLVColumn InstrumentColumn;
         private BrightIdeasSoftware.OLVColumn TransactionDateColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker fromDatePicker;

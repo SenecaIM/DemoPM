@@ -36,27 +36,29 @@ namespace Portfolio
             ISINColumn.AspectName = "Identifier.ISIN";
             TickerColumn.AspectName = "Identifier.Ticker";
             Sedol1Column.AspectName = "Identifier.Sedol1";
-            //Exchange.AspectName = "Exchange";
             InstrumentNameColumn.AspectName = "Identifier.InstrumentName";
-            //InstrumentType.AspectName = "InstrumentType";
-            //PriceMid.AspectName = "PriceMid";
-            //PriceBid.AspectName = "PriceBid";
-            //PriceAsk.AspectName = "PriceAsk";
-            //PriceLast.AspectName = "PriceLast";
-            //PriceNAV.AspectName = "PriceNAV";
-            //PriceCurrencyID.AspectName = "PriceCurrencyID";
             PriceDisplayColumn.AspectName = "PriceDisplay";
             DetailColumn.AspectName = "ToString";
-            //DivGross.AspectName = "DivGross";
-            //DivCurrencyID.AspectName = "DivCurrencyID";
-            //DivFactor.AspectName = "DivFactor";
-            //FixedParAmount.AspectName = "FixedParAmount";
-            //FixedParValue.AspectName = "FixedParValue";
-            //FixedCoupon.AspectName = "FixedCoupon";
-            //FixedAccuredInterest.AspectName = "FixedAccuredInterest";
+
+            InstrumentIDColumn.GroupKeyGetter += new GroupKeyGetterDelegate(InstrumentIDColumn_GroupKeyGetter);
+            InstrumentIDColumn.GroupKeyToTitleConverter += new GroupKeyToTitleConverterDelegate(InstrumentIDColumn_GroupKeyToTitleConverter);
+
+            portfolioOLV.ShowGroups = true;
+            portfolioOLV.AlwaysGroupByColumn = InstrumentIDColumn;
             Refresh();
            
 
+        }
+
+        private string InstrumentIDColumn_GroupKeyToTitleConverter(object groupKey)
+        {
+            return groupKey.ToString();
+        }
+
+        private object InstrumentIDColumn_GroupKeyGetter(object rowObject)
+        {
+            Instrument instrument = rowObject as Instrument;
+            return instrument.InstrumentType;
         }
 
         private void portfolioOLV_SelectedIndexChanged(object sender, EventArgs e)
